@@ -1,0 +1,185 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ACTIVE	tasks/sensor/sensor_task.c	/^	ACTIVE$/;"	e	enum:_sensor_state_t	file:
+ADC_SAMPLE_RATE_110HZ	sensors/ft2248.h	18;"	d
+ADC_SAMPLE_RATE_110HZ_T	sensors/ft2248.h	30;"	d
+ADC_SAMPLE_RATE_13P75HZ	sensors/ft2248.h	21;"	d
+ADC_SAMPLE_RATE_13P75HZ_T	sensors/ft2248.h	33;"	d
+ADC_SAMPLE_RATE_1P76KHZ	sensors/ft2248.h	14;"	d
+ADC_SAMPLE_RATE_1P76KHZ_T	sensors/ft2248.h	26;"	d
+ADC_SAMPLE_RATE_220HZ	sensors/ft2248.h	17;"	d
+ADC_SAMPLE_RATE_220HZ_T	sensors/ft2248.h	29;"	d
+ADC_SAMPLE_RATE_27P5HZ	sensors/ft2248.h	20;"	d
+ADC_SAMPLE_RATE_27P5HZ_T	sensors/ft2248.h	32;"	d
+ADC_SAMPLE_RATE_3P52KHZ	sensors/ft2248.h	13;"	d
+ADC_SAMPLE_RATE_3P52KHZ_T	sensors/ft2248.h	25;"	d
+ADC_SAMPLE_RATE_440HZ	sensors/ft2248.h	16;"	d
+ADC_SAMPLE_RATE_440HZ_T	sensors/ft2248.h	28;"	d
+ADC_SAMPLE_RATE_55HZ	sensors/ft2248.h	19;"	d
+ADC_SAMPLE_RATE_55HZ_T	sensors/ft2248.h	31;"	d
+ADC_SAMPLE_RATE_6P875HZ	sensors/ft2248.h	22;"	d
+ADC_SAMPLE_RATE_7P04KHZ_T	sensors/ft2248.h	24;"	d
+ADC_SAMPLE_RATE_880HZ	sensors/ft2248.h	15;"	d
+ADC_SAMPLE_RATE_880HZ_T	sensors/ft2248.h	27;"	d
+ANNA_VERBOSE	annalogger.h	8;"	d
+APPLICATION_VERSION	main.c	96;"	d	file:
+APP_NAME	main.c	95;"	d	file:
+BoardInit	main.c	/^BoardInit(void)$/;"	f	file:
+CLIENT_CONNECTION_FAILED	tasks/network/network_task.c	/^    CLIENT_CONNECTION_FAILED = LAN_CONNECTION_FAILED - 1,$/;"	e	enum:__anon1	file:
+ConfigureMode	tasks/network/network_task.c	/^static int ConfigureMode(int iMode)$/;"	f	file:
+ConfigureSimpleLinkToDefaultState	tasks/network/network_task.c	/^static long ConfigureSimpleLinkToDefaultState()$/;"	f	file:
+DEBUG_MASTER	annalogger.h	32;"	d
+DEBUG_NETWORK	annalogger.h	36;"	d
+DEBUG_SD	annalogger.h	35;"	d
+DEBUG_SENSOR	annalogger.h	33;"	d
+DEBUG_UART	annalogger.h	34;"	d
+DEVICE_NOT_IN_STATION_MODE	tasks/network/network_task.c	/^    DEVICE_NOT_IN_STATION_MODE = CLIENT_CONNECTION_FAILED - 1,$/;"	e	enum:__anon1	file:
+DisplayBanner	main.c	/^DisplayBanner(char * AppName)$/;"	f	file:
+ENTRY_annalogger	gcc/Makefile	/^ENTRY_annalogger=ResetISR$/;"	m
+GetSsidName	tasks/network/network_task.c	/^static int GetSsidName(char *pcSsidName, unsigned int uiMaxLen)$/;"	f	file:
+IPATH	gcc/Makefile	/^IPATH=..$/;"	m
+InitializeAppVariables	tasks/network/network_task.c	/^static void InitializeAppVariables()$/;"	f	file:
+LAN_CONNECTION_FAILED	tasks/network/network_task.c	/^    LAN_CONNECTION_FAILED = -0x7D0,        $/;"	e	enum:__anon1	file:
+LAUNCHPAD	gcc/Makefile	/^LAUNCHPAD=1$/;"	m
+LTC2448_SENSOR	sensors/ft2248.h	8;"	d
+LTC2448_SENSOR_CHANNEL_COUNT	sensors/ft2248.h	9;"	d
+MASTER_QUEUE_SIZE	annalogger.h	10;"	d
+NETWORK_QUEUE_SIZE	annalogger.h	14;"	d
+NO_OF_ATTEMPTS	tasks/network/network_task.c	10;"	d	file:
+OSI_STACK_SIZE	main.c	97;"	d	file:
+PING_FLAG	tasks/network/network_task.c	11;"	d	file:
+PING_INTERVAL	tasks/network/network_task.c	7;"	d	file:
+PING_PKT_SIZE	tasks/network/network_task.c	9;"	d	file:
+PING_TIMEOUT	tasks/network/network_task.c	8;"	d	file:
+PinMuxConfig	pinmux.c	/^PinMuxConfig(void)$/;"	f
+PingTest	tasks/network/network_task.c	/^static int PingTest(unsigned long ulIpAddr)$/;"	f	file:
+ROOT	gcc/Makefile	/^ROOT=..\/..\/..$/;"	m
+SCATTERgcc_annalogger	gcc/Makefile	/^SCATTERgcc_annalogger=annalogger.ld$/;"	m
+SD_QUEUE_SIZE	annalogger.h	13;"	d
+SENSOR_PRINT	tasks/sensor/sensor_task.c	6;"	d	file:
+SENSOR_PRINT	tasks/sensor/sensor_task.c	8;"	d	file:
+SENSOR_QUEUE_SIZE	annalogger.h	11;"	d
+SENSOR_TASK_ADD_SUBSCRIBER	tasks/sensor/sensor_task.c	21;"	d	file:
+SENSOR_TASK_DISABLE_EVENT	tasks/sensor/sensor_task.c	17;"	d	file:
+SENSOR_TASK_ENABLE_EVENT	tasks/sensor/sensor_task.c	16;"	d	file:
+SENSOR_TASK_GET_SENSOR_CONFIG	tasks/sensor/sensor_task.c	23;"	d	file:
+SENSOR_TASK_GET_SENSOR_CONFIG_LEN	tasks/sensor/sensor_task.c	24;"	d	file:
+SENSOR_TASK_IS_ENABLED_EVENT	tasks/sensor/sensor_task.c	18;"	d	file:
+SENSOR_TASK_REMOVE_SUBSCRIBER	tasks/sensor/sensor_task.c	22;"	d	file:
+SENSOR_TASK_SET_PARAMETERS	tasks/sensor/sensor_task.c	19;"	d	file:
+SENSOR_TASK_TIMEOUT	tasks/sensor/sensor_task.h	13;"	d
+SENSOR_TASK_UPDATE_RATE	tasks/sensor/sensor_task.c	20;"	d	file:
+STANDBY	tasks/sensor/sensor_task.c	/^	STANDBY,$/;"	e	enum:_sensor_state_t	file:
+STATE	tasks/sensor/sensor_task.c	/^	sensor_state_t STATE;$/;"	m	struct:_sensor_controller_t	file:
+STATUS_CODE_MAX	tasks/network/network_task.c	/^    STATUS_CODE_MAX = -0xBB8$/;"	e	enum:__anon1	file:
+SimpleLinkGeneralEventHandler	tasks/network/network_task.c	/^void SimpleLinkGeneralEventHandler(SlDeviceEvent_t *pDevEvent)$/;"	f
+SimpleLinkHttpServerCallback	tasks/network/network_task.c	/^void SimpleLinkHttpServerCallback(SlHttpServerEvent_t *pHttpEvent,$/;"	f
+SimpleLinkNetAppEventHandler	tasks/network/network_task.c	/^void SimpleLinkNetAppEventHandler(SlNetAppEvent_t *pNetAppEvent)$/;"	f
+SimpleLinkPingReport	tasks/network/network_task.c	/^void SimpleLinkPingReport(SlPingReport_t *pPingReport)$/;"	f
+SimpleLinkSockEventHandler	tasks/network/network_task.c	/^void SimpleLinkSockEventHandler(SlSockEvent_t *pSock)$/;"	f
+SimpleLinkWlanEventHandler	tasks/network/network_task.c	/^void SimpleLinkWlanEventHandler(SlWlanEvent_t *pSlWlanEvent)$/;"	f
+UART_QUEUE_SIZE	annalogger.h	12;"	d
+VPATH	gcc/Makefile	/^VPATH=..$/;"	m
+WAIT_TIME	sensors/ft2248.c	58;"	d	file:
+WlanAPMode	tasks/network/network_task.c	/^void WlanAPMode( void *pvParameters )$/;"	f
+__ANNALOGGER_H__	annalogger.h	2;"	d
+__FT2234_H__	sensors/ft2248.h	3;"	d
+__MASTER_TASK_H__	tasks/master/master_task.h	2;"	d
+__NETWORK_TASK__	tasks/network/network_task.h	2;"	d
+__PINMUX_H__	pinmux.h	45;"	d
+__SD_TASK__	tasks/sd/sd_task.h	2;"	d
+__SENSOR_H__	sensors/sensor.h	2;"	d
+__SENSOR_TASK__	tasks/sensor/sensor_task.h	2;"	d
+__UART_TASK_H__	tasks/uart/uart_task.h	2;"	d
+_al_msg_t	annalogger.h	/^typedef struct _al_msg_t {$/;"	s
+_ft2248_t	sensors/ft2248.c	/^struct _ft2248_t {$/;"	s	file:
+_queue_struct_t	annalogger.h	/^typedef struct _queue_struct_t {$/;"	s
+_sensor_controller_t	tasks/sensor/sensor_task.c	/^typedef struct _sensor_controller_t {$/;"	s	file:
+_sensor_state_t	tasks/sensor/sensor_task.c	/^typedef enum _sensor_state_t {$/;"	g	file:
+_sensor_t	sensors/sensor.h	/^struct _sensor_t{$/;"	s
+address	sensors/sensor.h	/^	uint8_t address;$/;"	m	struct:_sensor_t
+al_msg_t	annalogger.h	/^} al_msg_t;$/;"	t	typeref:struct:_al_msg_t
+al_queues	main.c	/^al_queues_t al_queues;$/;"	v
+al_queues_t	annalogger.h	/^} al_queues_t;$/;"	t	typeref:struct:_queue_struct_t
+channel_count	sensors/sensor.h	/^	uint8_t channel_count;$/;"	m	struct:_sensor_t
+data	sensors/ft2248.c	/^	uint32_t *data;$/;"	m	struct:_ft2248_t	file:
+data	sensors/sensor.h	/^	void * data;$/;"	m	struct:_sensor_t
+delete_ft2248	sensors/ft2248.c	/^void delete_ft2248(sensor_t * sensor){$/;"	f
+delete_sensor	sensors/sensor.c	/^void delete_sensor(sensor_t *sensor){$/;"	f
+e_AppStatusCodes	tasks/network/network_task.c	/^}e_AppStatusCodes;$/;"	t	typeref:enum:__anon1	file:
+event_type	annalogger.h	/^	uint8_t event_type;$/;"	m	struct:_al_msg_t
+ft2248_get_all_sensor_data	sensors/ft2248.c	/^void ft2248_get_all_sensor_data(sensor_t * sensor, void * data){$/;"	f
+ft2248_get_sensor_data	sensors/ft2248.c	/^void ft2248_get_sensor_data(sensor_t * sensor, uint8_t channel, void * data){$/;"	f
+ft2248_set_all_sensor_data	sensors/ft2248.c	/^void ft2248_set_all_sensor_data(sensor_t *sensor, void *data){$/;"	f
+ft2248_set_sensor_data	sensors/ft2248.c	/^void ft2248_set_sensor_data(sensor_t * sensor, uint8_t channel, void * data){$/;"	f
+ft2248_set_speed	sensors/ft2248.c	/^void ft2248_set_speed(sensor_t * sensor, uint8_t speed){$/;"	f
+ft2248_t	sensors/ft2248.c	/^typedef struct _ft2248_t ft2248_t;$/;"	t	typeref:struct:_ft2248_t	file:
+ft2248_update_all_sensor_data	sensors/ft2248.c	/^void ft2248_update_all_sensor_data(sensor_t *sensor){$/;"	f
+ft2248_update_sensor_data	sensors/ft2248.c	/^void ft2248_update_sensor_data(sensor_t *sensor, uint8_t channel){$/;"	f
+g_uiGatewayIP	tasks/network/network_task.c	/^unsigned long  g_uiGatewayIP = 0;$/;"	v
+g_ulPingPacketsRecv	tasks/network/network_task.c	/^unsigned long  g_ulPingPacketsRecv = 0;$/;"	v
+g_ulStaIp	tasks/network/network_task.c	/^unsigned long  g_ulStaIp = 0;$/;"	v
+g_ulStatus	tasks/network/network_task.c	/^unsigned char  g_ulStatus = 0;$/;"	v
+get_all_sensor_data	sensors/sensor.c	/^void get_all_sensor_data(sensor_t * sensor, void * data){$/;"	f
+get_all_sensor_data_fp	sensors/sensor.h	/^	get_all_sensor_data_fp_t get_all_sensor_data_fp;$/;"	m	struct:_sensor_t
+get_all_sensor_data_fp_t	sensors/sensor.h	/^typedef void (*get_all_sensor_data_fp_t)(sensor_t *, void *);$/;"	t
+get_max_sensor_channel_count	sensors/sensor.c	/^uint8_t get_max_sensor_channel_count(sensor_t *sensor){$/;"	f
+get_sensor_address	sensors/sensor.c	/^uint8_t get_sensor_address(sensor_t *sensor){$/;"	f
+get_sensor_data	sensors/sensor.c	/^void get_sensor_data(sensor_t * sensor, uint8_t channel, void * data){$/;"	f
+get_sensor_data_fp	sensors/sensor.h	/^	get_sensor_data_fp_t get_sensor_data_fp;$/;"	m	struct:_sensor_t
+get_sensor_data_fp_t	sensors/sensor.h	/^typedef void (*get_sensor_data_fp_t)(sensor_t *, uint8_t, void *);$/;"	t
+get_sensor_type	sensors/sensor.c	/^uint8_t get_sensor_type(sensor_t *sensor){$/;"	f
+main	main.c	/^void main()$/;"	f
+master_event_queue	annalogger.h	/^	OsiMsgQ_t master_event_queue;$/;"	m	struct:_queue_struct_t
+master_task_entry	tasks/master/master_task.c	/^void master_task_entry(void *pvParameters){$/;"	f
+msg	annalogger.h	/^	void * msg;$/;"	m	struct:_al_msg_t
+msg_len	annalogger.h	/^	uint8_t msg_len;$/;"	m	struct:_al_msg_t
+network_queue	annalogger.h	/^	OsiMsgQ_t network_queue;	$/;"	m	struct:_queue_struct_t
+network_task_entry	tasks/network/network_task.c	/^void network_task_entry(void *pvParameters){$/;"	f
+new_ft2248	sensors/ft2248.c	/^sensor_t * new_ft2248(uint8_t address){	$/;"	f
+new_sensor	sensors/sensor.c	/^sensor_t * new_sensor(uint8_t type, uint8_t address){$/;"	f
+num_devices	tasks/sensor/sensor_task.c	/^	uint16_t num_devices;$/;"	m	struct:_sensor_controller_t	file:
+sd_queue	annalogger.h	/^	OsiMsgQ_t sd_queue;$/;"	m	struct:_queue_struct_t
+sd_task_entry	tasks/sd/sd_task.c	/^void sd_task_entry(void *pvParameters){$/;"	f
+sensor_add_subscriber	tasks/sensor/sensor_task.c	/^long sensor_add_subscriber(OsiMsgQ_t* queue){$/;"	f
+sensor_controller	tasks/sensor/sensor_task.c	/^sensor_controller_t sensor_controller;$/;"	v
+sensor_controller_t	tasks/sensor/sensor_task.c	/^} sensor_controller_t;$/;"	t	typeref:struct:_sensor_controller_t	file:
+sensor_disable	tasks/sensor/sensor_task.c	/^long sensor_disable(){$/;"	f
+sensor_enable	tasks/sensor/sensor_task.c	/^long sensor_enable(){$/;"	f
+sensor_get_sensor_config	tasks/sensor/sensor_task.c	/^long sensor_get_sensor_config(uint8_t device, const char * json_config){$/;"	f
+sensor_get_sensor_config_len	tasks/sensor/sensor_task.c	/^long sensor_get_sensor_config_len(uint8_t device){$/;"	f
+sensor_init	tasks/sensor/sensor_task.c	/^void sensor_init(void){$/;"	f
+sensor_is_enabled	tasks/sensor/sensor_task.c	/^long sensor_is_enabled(){$/;"	f
+sensor_queue	annalogger.h	/^	OsiMsgQ_t sensor_queue;$/;"	m	struct:_queue_struct_t
+sensor_remove_subscriber	tasks/sensor/sensor_task.c	/^long sensor_remove_subscriber(OsiMsgQ_t* queue){$/;"	f
+sensor_set_sensor_parameters	tasks/sensor/sensor_task.c	/^long sensor_set_sensor_parameters(uint8_t device, const char * json_config){$/;"	f
+sensor_set_update_rate	tasks/sensor/sensor_task.c	/^long sensor_set_update_rate(uint8_t device, uint16_t update_rate_ms){$/;"	f
+sensor_state_t	tasks/sensor/sensor_task.c	/^}sensor_state_t;$/;"	t	typeref:enum:_sensor_state_t	file:
+sensor_t	sensors/sensor.h	/^typedef struct _sensor_t sensor_t;$/;"	t	typeref:struct:_sensor_t
+sensor_task_entry	tasks/sensor/sensor_task.c	/^void sensor_task_entry(void *pvParameters){$/;"	f
+set_all_sensor_data	sensors/sensor.c	/^void set_all_sensor_data(sensor_t *sensor, void *data){$/;"	f
+set_all_sensor_data_fp	sensors/sensor.h	/^	set_all_sensor_data_fp_t set_all_sensor_data_fp;$/;"	m	struct:_sensor_t
+set_all_sensor_data_fp_t	sensors/sensor.h	/^typedef void (*set_all_sensor_data_fp_t)(sensor_t *, void *);$/;"	t
+set_sensor_data	sensors/sensor.c	/^void set_sensor_data(sensor_t * sensor, uint8_t channel, void * data){$/;"	f
+set_sensor_data_fp	sensors/sensor.h	/^	set_sensor_data_fp_t set_sensor_data_fp;$/;"	m	struct:_sensor_t
+set_sensor_data_fp_t	sensors/sensor.h	/^typedef void (*set_sensor_data_fp_t)(sensor_t *, uint8_t, void *);$/;"	t
+setup_queues	main.c	/^int setup_queues(){$/;"	f
+speed	sensors/ft2248.c	/^	uint8_t speed;$/;"	m	struct:_ft2248_t	file:
+sq	tasks/sensor/sensor_task.c	/^	OsiMsgQ_t sq;$/;"	m	struct:_sensor_controller_t	file:
+type	sensors/sensor.h	/^	uint8_t type;$/;"	m	struct:_sensor_t
+uart_queue	annalogger.h	/^	OsiMsgQ_t uart_queue;$/;"	m	struct:_queue_struct_t
+uart_task_entry	tasks/uart/uart_task.c	/^void uart_task_entry(void *pvParameters){$/;"	f
+update_all_sensor_data	sensors/sensor.c	/^void update_all_sensor_data(sensor_t *sensor){$/;"	f
+update_all_sensor_data_fp	sensors/sensor.h	/^	update_all_sensor_data_fp_t update_all_sensor_data_fp;$/;"	m	struct:_sensor_t
+update_all_sensor_data_fp_t	sensors/sensor.h	/^typedef void (*update_all_sensor_data_fp_t)(sensor_t *);$/;"	t
+update_sensor_data	sensors/sensor.c	/^void update_sensor_data(sensor_t *sensor, uint8_t channel){$/;"	f
+update_sensor_data_fp	sensors/sensor.h	/^	update_sensor_data_fp_t update_sensor_data_fp;$/;"	m	struct:_sensor_t
+update_sensor_data_fp_t	sensors/sensor.h	/^typedef void (*update_sensor_data_fp_t)(sensor_t *, uint8_t);$/;"	t
+vApplicationIdleHook	main.c	/^vApplicationIdleHook( void)$/;"	f
+vApplicationMallocFailedHook	main.c	/^void vApplicationMallocFailedHook()$/;"	f
+vApplicationStackOverflowHook	main.c	/^void vApplicationStackOverflowHook(OsiTaskHandle *pxTask, $/;"	f
+vAssertCalled	main.c	/^vAssertCalled( const char *pcFile, unsigned long ulLine )$/;"	f
