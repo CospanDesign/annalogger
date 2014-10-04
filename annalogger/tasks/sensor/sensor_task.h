@@ -11,6 +11,8 @@
 
 //10 second timeout for debug purposes
 #define SENSOR_TASK_TIMEOUT 10000
+//100 ms is the minimum update rate
+#define SENSOR_MIN_TASK_TIMEOUT 100
 
 /*
  * sensor task API:
@@ -61,7 +63,10 @@ long sensor_is_enabled();
  *	OsiReturnVal_e
  *
  */
-long sensor_add_subscriber(OsiMsgQ_t* queue);
+
+void sensor_enable_uart_subscriber(bool enable);
+void sensor_enable_sd_subscriber(bool enable);
+void sensor_enable_network_subscriber(bool enable);
 
 /* sensor_remove_subscriber
  * 
@@ -87,7 +92,7 @@ long sensor_remove_subscriber(OsiMsgQ_t* queue);
  *	OsiReturnVal_e
  *
  */
-long sensor_set_update_rate(uint8_t device, uint16_t update_rate_ms);
+long sensor_set_update_rate(int device, int update_rate_ms);
 
 /* sensor_get_sensor_config
  * 
@@ -101,7 +106,7 @@ long sensor_set_update_rate(uint8_t device, uint16_t update_rate_ms);
  *	OsiReturnVal_e
  *
  */
-long sensor_get_sensor_config(uint8_t device, const char * json_config);
+long sensor_get_sensor_config(int device);
 
 /* sensor_get_sensor_config_len
  * 
@@ -114,7 +119,7 @@ long sensor_get_sensor_config(uint8_t device, const char * json_config);
  *	OsiReturnVal_e
  *
  */
-long sensor_get_sensor_config_len(uint8_t device);
+long sensor_get_sensor_config_len(int device);
 
 /* sensor_set_sensor_parameters
  * 
@@ -128,7 +133,7 @@ long sensor_get_sensor_config_len(uint8_t device);
  *	OsiReturnVal_e
  *
  */
-long sensor_set_sensor_parameters(uint8_t device, const char * json_config);
+long sensor_set_sensor_parameters(int device, const char * json_config);
 
 
 #endif

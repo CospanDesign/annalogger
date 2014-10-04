@@ -193,6 +193,21 @@ void vApplicationStackOverflowHook(OsiTaskHandle *pxTask,
 }
 #endif //USE_FREERTOS
 
+
+
+OsiReturnVal_e master_event(uint8_t 	event_type,
+														uint8_t 	message_param,
+														void 			*msg,
+														OsiTime_t timeout){
+	al_msg_t m;
+	
+	m.event_type = event_type;
+	m.msg_param = message_param;
+	m.msg = msg;
+
+	return osi_MsgQWrite(&al_queues.master_event_queue, (void *) &m, 10);		
+}
+
 //*****************************************************************************
 //
 //! Application startup display on UART

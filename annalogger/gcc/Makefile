@@ -107,7 +107,6 @@ clean:
 #
 ${OBJDIR}:
 	@mkdir -p ${OBJDIR}
-	@mkdir -p ${OBJDIR}/sensors
 	@mkdir -p ${OBJDIR}/tasks/uart
 	@mkdir -p ${OBJDIR}/tasks/network
 	@mkdir -p ${OBJDIR}/tasks/sd
@@ -129,7 +128,7 @@ ifdef LAUNCHPAD
 ${BINDIR}/annalogger.axf: ${OBJDIR}/launchpad.o
 ${BINDIR}/annalogger.axf: ${OBJDIR}/launchpad_sensor.o
 endif
-${BINDIR}/annalogger.axf: ${OBJDIR}/sensors/sensor.o
+${BINDIR}/annalogger.axf: ${OBJDIR}/sensor.o
 ${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/uart/uart_task.o
 ${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/sd/sd_task.o
 ${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/network/network_task.o
@@ -139,6 +138,7 @@ ${BINDIR}/annalogger.axf: ${OBJDIR}/main.o
 ${BINDIR}/annalogger.axf: ${OBJDIR}/pinmux.o
 ${BINDIR}/annalogger.axf: ${OBJDIR}/uart_if.o
 ${BINDIR}/annalogger.axf: ${OBJDIR}/i2c_if.o
+${BINDIR}/annalogger.axf: ${OBJDIR}/bma222_sensor.o
 ${BINDIR}/annalogger.axf: ${OBJDIR}/bma222drv.o
 ${BINDIR}/annalogger.axf: ${OBJDIR}/tmp006drv.o
 ${BINDIR}/annalogger.axf: ${OBJDIR}/gpio_if.o
