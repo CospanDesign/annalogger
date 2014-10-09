@@ -113,24 +113,10 @@ al_queues_t al_queues;
 
 
 #ifdef USE_FREERTOS
-
-
 //*****************************************************************************
 // FreeRTOS User Hook Functions enabled in FreeRTOSConfig.h
 //*****************************************************************************
-
-//*****************************************************************************
-//
-//! \brief Application defined hook (or callback) function - assert
-//!
-//! \param[in]  pcFile - Pointer to the File Name
-//! \param[in]  ulLine - Line Number
-//! 
-//! \return none
-//!
-//*****************************************************************************
-void
-vAssertCalled( const char *pcFile, unsigned long ulLine )
+void vAssertCalled( const char *pcFile, unsigned long ulLine )
 {
     //Handle Assert here
     while(1)
@@ -138,30 +124,11 @@ vAssertCalled( const char *pcFile, unsigned long ulLine )
     }
 }
 
-//*****************************************************************************
-//
-//! \brief Application defined idle task hook
-//! 
-//! \param  none
-//! 
-//! \return none
-//!
-//*****************************************************************************
-void
-vApplicationIdleHook( void)
+void vApplicationIdleHook( void)
 {
     //Handle Idle Hook for Profiling, Power Management etc
 }
 
-//*****************************************************************************
-//
-//! \brief Application defined malloc failed hook
-//! 
-//! \param  none
-//! 
-//! \return none
-//!
-//*****************************************************************************
 void vApplicationMallocFailedHook()
 {
     //Handle Memory Allocation Errors
@@ -170,15 +137,6 @@ void vApplicationMallocFailedHook()
     }
 }
 
-//*****************************************************************************
-//
-//! \brief Application defined stack overflow hook
-//! 
-//! \param  none
-//! 
-//! \return none
-//!
-//*****************************************************************************
 void vApplicationStackOverflowHook(OsiTaskHandle *pxTask, 
                                    signed char *pcTaskName)
 {
@@ -189,10 +147,6 @@ void vApplicationStackOverflowHook(OsiTaskHandle *pxTask,
     }
 }
 #endif //USE_FREERTOS
-
-
-
-
 OsiReturnVal_e generic_enqueue(	OsiMsgQ_t *queue,	
 																uint8_t 	event_type,
 																int32_t 	message_param,
@@ -232,17 +186,6 @@ OsiReturnVal_e network_event(uint8_t 	event_type,
 
 
 
-
-
-//*****************************************************************************
-//
-//! Application startup display on UART
-//!
-//! \param  none
-//!
-//! \return none
-//!
-//*****************************************************************************
 static void
 DisplayBanner(char * AppName)
 {
@@ -253,15 +196,6 @@ DisplayBanner(char * AppName)
     Report("\n\n\n\r");
 }
 
-//*****************************************************************************
-//
-//! Board Initialization & Configuration
-//!
-//! \param  None
-//!
-//! \return None
-//
-//*****************************************************************************
 static void
 BoardInit(void)
 {
@@ -454,9 +388,3 @@ void main()
     osi_start();
 }
 
-//*****************************************************************************
-//
-// Close the Doxygen group.
-//! @}
-//
-//*****************************************************************************

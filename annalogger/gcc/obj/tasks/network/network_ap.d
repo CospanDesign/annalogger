@@ -32,4 +32,9 @@ obj/tasks/network/network_ap.o: ../tasks/network/network_ap.c \
  ../../../simplelink/include/device.h \
  ../../../simplelink/include/netcfg.h \
  ../../../simplelink/include/wlan_rx_filters.h ../../common/uart_if.h \
- ../../common/common.h
+ ../../common/common.h ../../../simplelink/include/device.h \
+ /cygdrive/c\cygwin\arm-none-eabi\include\stdio.h \
+ /cygdrive/c\cygwin\lib\gcc\arm-none-eabi\4.8.4\include\stdarg.h \
+ /cygdrive/c\cygwin\arm-none-eabi\include\sys\types.h \
+ /cygdrive/c\cygwin\arm-none-eabi\include\machine\types.h \
+ /cygdrive/c\cygwin\arm-none-eabi\include\sys\stdio.h

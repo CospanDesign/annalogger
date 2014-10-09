@@ -7,6 +7,8 @@ extern network_controller_t nc;
 void SimpleLinkWlanEventHandler(SlWlanEvent_t *pSlWlanEvent)
 {
   slWlanConnectAsyncResponse_t*  pEventData = NULL;
+	NETWORK_PRINT("%s Entered\r\n", __func__);
+
   switch(pSlWlanEvent->Event)
   {
     case SL_WLAN_CONNECT_EVENT:
@@ -79,6 +81,7 @@ void SimpleLinkWlanEventHandler(SlWlanEvent_t *pSlWlanEvent)
 void SimpleLinkNetAppEventHandler(SlNetAppEvent_t *pNetAppEvent)
 {
 	long retval;
+	NETWORK_PRINT("%s Entered\r\n", __func__);
 	network_event(SIMPLE_LINK_NETAPP_EVENT, pNetAppEvent->Event, NULL, 0);
 	switch(pNetAppEvent->Event){
 		case SL_NETAPP_IPV4_IPACQUIRED_EVENT:
@@ -112,6 +115,7 @@ void SimpleLinkNetAppEventHandler(SlNetAppEvent_t *pNetAppEvent)
 
 void SimpleLinkHttpServerCallback(SlHttpServerEvent_t *pHttpEvent, SlHttpServerResponse_t *pHttpResponse)
 {
+	NETWORK_PRINT("%s Entered\r\n", __func__);
 }
 
 void SimpleLinkGeneralEventHandler(SlDeviceEvent_t *pDevEvent)
@@ -130,6 +134,7 @@ void SimpleLinkSockEventHandler(SlSockEvent_t *pSock)
   //
   // This application doesn't work w/ socket - Events are not expected
   //
+	NETWORK_PRINT("%s Entered\r\n", __func__);
 	switch( pSock->Event ){
     case SL_SOCKET_TX_FAILED_EVENT:
       switch( pSock->EventData.status )
