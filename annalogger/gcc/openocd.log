@@ -12,5 +12,1185 @@ Info : cc3200.cpu: hardware has 6 breakpoints, 4 watchpoints
 Info : accepting 'gdb' connection from pipe
 target state: halted
 target halted due to debug-request, current mode: Thread 
-xPSR: 0x41000000 pc: 0x0000230c msp: 0x20003fd0
+xPSR: 0x41000000 pc: 0x00002310 msp: 0x20003fd0
 Warn : acknowledgment received, but no packet pending
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 100ms
+Warn : target not halted
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Warn : Block read error address 0x20013b40
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 700ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 1500ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 3100ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Warn : keep_alive() was not invoked in the 1000ms timelimit. GDB alive packet not sent! (41772323). Workaround: increase "set remotetimeout" in GDB
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Error: FT_Write returned: io error
+Error: couldn't write MPSSE commands to FT2232
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 6300ms
+Info : dropped 'gdb' connection
