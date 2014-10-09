@@ -1,7 +1,11 @@
 @charset "utf-8";
 /* CSS Document */
 
-body { margin:0; font-size:14px; font-family:Arial, Helvetica, sans-serif; }
+body {  margin      : 0;
+        width       : 100%;
+        font-size   : 14px;
+        font-family : Arial, Helvetica, sans-serif;
+}
 
 h1 { font-size: 16px; font-weight:bold; }
 a { text-decoration:none; }
@@ -17,7 +21,7 @@ h2 { padding-left: 10%; }
   width: 								25px;
   background: 					#000000;
   color: 								#000000;
-		
+
 	vertical-align:				text-bottom;
 	border-style:					none;
 	background-repeat:		no-repeat;
@@ -25,6 +29,13 @@ h2 { padding-left: 10%; }
 	outline:							0px;
 	margin:								0px;
 }
+
+/*
+canvas#main_chart {
+  height: 							200px;
+  width: 								600px;
+}
+*/
 
 .cd-logo-black {
   display: 							inline-block;
@@ -35,8 +46,6 @@ h2 { padding-left: 10%; }
 	background-position: 	0px 0px;
 	background-repeat:		no-repeat;
 }
-
-
 
 .header .blue-bar, .footer .blue-bar {
   //background: none repeat scroll 0 0 #0000CC;
@@ -52,7 +61,6 @@ h2 { padding-left: 10%; }
 .footer {
   padding-top: 20px;
 }
-
 
 .table-annalogger {
 	width: 100%;
@@ -139,7 +147,7 @@ h2 { padding-left: 10%; }
 	background-position: 0px 0px;
 	background-repeat:no-repeat;
 
-	
+
 }
 .links-list li a {
     color: #CC0000;
@@ -179,6 +187,10 @@ h2 { padding-left: 10%; }
 	border-radius:5px;
 	padding:5px 10px;
 }
+
+
+
+
 
 
 /* demos page */
@@ -258,8 +270,8 @@ h2 { padding-left: 10%; }
 #switchImage {
     background-image: url("../images/demo-lightswitch.jpg");
     background-position: 0 -72px;
-    background-repeat:no-repeat; 
-    border: 0;  
+    background-repeat:no-repeat;
+    border: 0;
     cursor:pointer;
     width: 50px;
     height: 70px;
@@ -338,7 +350,7 @@ h2 { padding-left: 10%; }
 .off {
 	display:none;
 }
-.backToTop { 
+.backToTop {
     text-align: right;
     padding-top: 20px;
     width: 480px;
@@ -387,7 +399,7 @@ h2 { padding-left: 10%; }
 	.sbd3200 #desc6 {top: 0px; left:10px; display:block;}
 	.sbd3200 #desc7 {top: 0px; left:10px; display:block;}
 	.sbd3200 #desc8 {top: 0px; left:10px; display:block;}
-	
+
 	.sbd3100 #desc1 {top: 0px; left:10px; display:block;}
 	.sbd3100 #desc2 {top: 0px; left:10px; display:block;}
 	.sbd3100 #desc3 {top: 0px; left:10px; display:block;}
@@ -396,17 +408,17 @@ h2 { padding-left: 10%; }
 	.sbd3100 #desc6 {top: 0px; left:10px; display:block;}
 	.sbd3100 #desc7 {top: 0px; left:10px; display:block;}
 	.sbd3100 #desc8 {top: 0px; left:10px; display:block;}
-	
+
 	.device-properties { width: 100%; }
 	#tempInput a { padding-left:0 ; padding-right: 0; }
 	#tempInput input[type="text"] { width: 1.5em; }
 	.didYouKnow { width:270px; margin:0 0 0 0.25em; }
     .backToTop { width: 100%; }
-	
+
 	.washDryer img { left: -19px; position: relative; }
 	.dryerText { left: 50px; }
 	.washerText { left: 10px; }
-	
+
 	.profileItem {
     overflow: hidden;
     text-overflow: ellipsis;

@@ -33,47 +33,63 @@ $(document).ready(function() {
 		]
 	}
 
-	var ctx = document.getElementById("main_chart").getContext("2d");
-	window.myLine = new Chart(ctx).Line(line_data, {
-		responsive: true
-	});
+	var options_animation = {
+		scaleOverride		: true,
+		scaleSteps			: 10,
+		scaleStepWidth	: 10,
+    responsive      : true,
+		scaleStartValue	:	0
+	}
+	var options_no_animation = {
+		scaleOverride		:	true,
+		animation				:	false,
+		scaleSteps			: 10,
+		scaleStepWidth	:	10,
+    responsive      : true,
+    bezierCurve     : false,
+		scaleStartValue	:	0
+	}
 
+
+  
+  //var date = Date().now().toString()
+
+	var ctx = document.getElementById("main_chart").getContext("2d");
+
+  ctx.canvas.width = window.innerWidth;
+  ctx.canvas.height = 200;
+	var line_chart = new Chart(ctx);
+  var lchart = line_chart.Line(line_data, options_no_animation);
 
 	var update_data = function(old_data){
 		var labels = old_data["labels"];
 		var data = old_data["datasets"][0]["data"];
 
 		labels.shift();
-		count++;
-		labels.push(count.toString());
+		time_pos++;
+		labels.push(time_pos.toString());
+    //date = Date().now().toString()
+		//labels.push(date);
 
-		var new_data = data[9] + randomScalingFactor();
-		
+		var new_data = randomScalingFactor();
+
 		data.push(new_data);
 		data.shift();
 	};
 
-	var options_animation = {
-		scaleOverride		: true,
-		scaleSteps			: 10,
-		scaleStepWidth	: 10,
-		scaleStartValue	:	0
-	}
-	var options_no_animation = {
-		animation				:	false,
-		scaleOverride		:	true,
-		scaleSteps			:	20,
-		scaleStepWidth	:	10,
-		scaleStartValue	:	0
-	}
 
-	var options_no_animation = {animation : false};
+	setInterval(function(){
 
-
-	setntervale(function(){
 		update_data(line_data);
-		windows.myLine(line_data, options_no_animation),
-		200
-	});,
 
-})	
+    for (var i = 0; i < line_data["labels"].length; i++){
+      lchart.datasets[0].points[i].value = line_data["datasets"][0]["data"][i];
+    }
+    lchart.labels = line_data["labels"];
+    lchart.update();
+		//line_chart.Line(line_data, options_no_animation)
+    //line_chart.Line.update();
+	  }, 200
+  );
+
+})
