@@ -110,31 +110,31 @@ extern "C"
 // Status bits - These are used to set/reset the corresponding bits in 
 // given variable
 typedef enum{
-    STATUS_BIT_NWP_INIT = 0, // If this bit is set: Network Processor is 
-                             // powered up
-                             
-    STATUS_BIT_CONNECTION,   // If this bit is set: the device is connected to 
-                             // the AP or client is connected to device (AP)
-                             
-    STATUS_BIT_IP_LEASED,    // If this bit is set: the device has leased IP to 
-                             // any connected client
-
-    STATUS_BIT_IP_AQUIRED,   // If this bit is set: the device has acquired an IP
+    STATUS_BIT_NWP_INIT = 0,      // If this bit is set: Network Processor is 
+                                  // powered up
+                                  
+    STATUS_BIT_CONNECTION,        // If this bit is set: the device is connected to 
+                                  // the AP or client is connected to device (AP)
+                                  
+    STATUS_BIT_IP_LEASED,         // If this bit is set: the device has leased IP to 
+                                  // any connected client
+                                  
+    STATUS_BIT_IP_AQUIRED,        // If this bit is set: the device has acquired an IP
     
     STATUS_BIT_SMARTCONFIG_START, // If this bit is set: the SmartConfiguration 
                                   // process is started from SmartConfig app
 
-    STATUS_BIT_P2P_DEV_FOUND,    // If this bit is set: the device (P2P mode) 
-                                 // found any p2p-device in scan
+    STATUS_BIT_P2P_DEV_FOUND,    	// If this bit is set: the device (P2P mode) 
+                                 	// found any p2p-device in scan
 
-    STATUS_BIT_P2P_REQ_RECEIVED, // If this bit is set: the device (P2P mode) 
-                                 // found any p2p-negotiation request
+    STATUS_BIT_P2P_REQ_RECEIVED, 	// If this bit is set: the device (P2P mode) 
+                                 	// found any p2p-negotiation request
 
     STATUS_BIT_CONNECTION_FAILED, // If this bit is set: the device(P2P mode)
                                   // connection to client(or reverse way) is failed
 
-    STATUS_BIT_PING_DONE         // If this bit is set: the device has completed
-                                 // the ping operation
+    STATUS_BIT_PING_DONE         	// If this bit is set: the device has completed
+                                 	// the ping operation
 
 }e_StatusBits;
 

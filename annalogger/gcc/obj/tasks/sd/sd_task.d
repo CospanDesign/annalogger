@@ -14,8 +14,9 @@ obj/tasks/sd/sd_task.o: ../tasks/sd/sd_task.c ../tasks/sd/sd_task.h \
  /cygdrive/c\cygwin\arm-none-eabi\include\sys\lock.h \
  /cygdrive/c\cygwin\arm-none-eabi\include\machine\stdlib.h ../annalogger.h \
  /cygdrive/c\cygwin\lib\gcc\arm-none-eabi\4.8.4\include\stdint.h \
- /cygdrive/c\cygwin\arm-none-eabi\include\stdint.h ../../../oslib/osi.h \
- ../../../simplelink/include/simplelink.h \
+ /cygdrive/c\cygwin\arm-none-eabi\include\stdint.h \
+ /cygdrive/c\cygwin\lib\gcc\arm-none-eabi\4.8.4\include\stdbool.h \
+ ../../../oslib/osi.h ../../../simplelink/include/simplelink.h \
  ../../../simplelink/include/../user.h \
  /cygdrive/c\cygwin\arm-none-eabi\include\string.h \
  /cygdrive/c\cygwin\lib\gcc\arm-none-eabi\4.8.4\include-fixed\sys\cdefs.h \

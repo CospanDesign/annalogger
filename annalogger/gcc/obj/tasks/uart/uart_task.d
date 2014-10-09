@@ -14,5 +14,6 @@ obj/tasks/uart/uart_task.o: ../tasks/uart/uart_task.c \
  /cygdrive/c\cygwin\arm-none-eabi\include\sys\lock.h \
  /cygdrive/c\cygwin\arm-none-eabi\include\machine\stdlib.h ../annalogger.h \
  /cygdrive/c\cygwin\lib\gcc\arm-none-eabi\4.8.4\include\stdint.h \
- /cygdrive/c\cygwin\arm-none-eabi\include\stdint.h ../../../oslib/osi.h \
- ../../common/uart_if.h
+ /cygdrive/c\cygwin\arm-none-eabi\include\stdint.h \
+ /cygdrive/c\cygwin\lib\gcc\arm-none-eabi\4.8.4\include\stdbool.h \
+ ../../../oslib/osi.h ../../common/uart_if.h

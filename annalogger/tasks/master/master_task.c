@@ -45,16 +45,14 @@ void master_task_entry(void *pvParameters){
 	MASTER_PRINT ("I'm alive\n\r");
 	while (1){
 		retval = osi_MsgQRead(&meq, &msg, MASTER_TASK_TIMEOUT);
+		osi_Sleep(20000);
 		if (retval == OSI_OPERATION_FAILED) {
-#ifdef ANNA_VERBOSE
 			MASTER_PRINT ("master task alive\n\r");
-			MASTER_PRINT ("exited MsgQRead from timeout\n\r");
-#endif
+			MASTER_PRINT ("exited Master Queue Read from timeout\n\r");
 		}
 		else {
 			MASTER_PRINT ("Master Task: Received event: %d\n\r", msg.event_type);
 		}
 	};
 }
-
 

@@ -97,9 +97,6 @@
 #define OSI_STACK_SIZE          2048
 
 
-
-
-
 extern void (* const g_pfnVectors[])(void);
 
 al_queues_t al_queues;
@@ -195,18 +192,47 @@ void vApplicationStackOverflowHook(OsiTaskHandle *pxTask,
 
 
 
-OsiReturnVal_e master_event(uint8_t 	event_type,
-														uint8_t 	message_param,
-														void 			*msg,
-														OsiTime_t timeout){
+
+OsiReturnVal_e generic_enqueue(	OsiMsgQ_t *queue,	
+																uint8_t 	event_type,
+																int32_t 	message_param,
+																void 			*msg,
+																OsiTime_t timeout){
 	al_msg_t m;
 	
 	m.event_type = event_type;
 	m.msg_param = message_param;
 	m.msg = msg;
 
-	return osi_MsgQWrite(&al_queues.master_event_queue, (void *) &m, 10);		
+	return osi_MsgQWrite(queue, (void *) &m, timeout);		
 }
+
+
+OsiReturnVal_e master_event(uint8_t 	event_type,
+														int32_t 	message_param,
+														void 			*msg,
+														OsiTime_t timeout){
+	return generic_enqueue(&al_queues.master_event_queue,
+												 event_type,
+												 message_param,
+												 msg,
+												 timeout);
+}
+
+OsiReturnVal_e network_event(uint8_t 	event_type,
+														int32_t 	message_param,
+														void 			*msg,
+														OsiTime_t timeout){
+	return generic_enqueue(&al_queues.network_queue,
+												 event_type,
+												 message_param,
+												 msg,
+												 timeout);
+}
+
+
+
+
 
 //*****************************************************************************
 //

@@ -73,8 +73,8 @@ CFLAGS+=-DUSE_FREERTOS
 # Where to find header files that do not live in the source directory.
 #
 IPATH=..
-IPATH+=../..
 IPATH+=../sensors
+IPATH+=../..
 IPATH+=../../common
 IPATH+=../../../inc
 IPATH+=../../../oslib
@@ -127,21 +127,28 @@ debug:
 ifdef LAUNCHPAD
 ${BINDIR}/annalogger.axf: ${OBJDIR}/launchpad.o
 ${BINDIR}/annalogger.axf: ${OBJDIR}/launchpad_sensor.o
-endif
-${BINDIR}/annalogger.axf: ${OBJDIR}/sensor.o
-${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/uart/uart_task.o
-${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/sd/sd_task.o
-${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/network/network_task.o
-${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/sensor/sensor_task.o
-${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/master/master_task.o
-${BINDIR}/annalogger.axf: ${OBJDIR}/main.o
-${BINDIR}/annalogger.axf: ${OBJDIR}/pinmux.o
-${BINDIR}/annalogger.axf: ${OBJDIR}/uart_if.o
-${BINDIR}/annalogger.axf: ${OBJDIR}/i2c_if.o
 ${BINDIR}/annalogger.axf: ${OBJDIR}/bma222_sensor.o
 ${BINDIR}/annalogger.axf: ${OBJDIR}/bma222drv.o
 ${BINDIR}/annalogger.axf: ${OBJDIR}/tmp006drv.o
+endif
+${BINDIR}/annalogger.axf: ${OBJDIR}/sensor.o
+
+${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/uart/uart_task.o
+${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/sd/sd_task.o
+#${BINDIR}/annalogger.axf: ${OBJDIR}/network_if.o
+${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/network/network.o
+${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/network/network_task.o
+${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/network/network_ap.o
+${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/network/network_ws.o
+${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/sensor/sensor_task.o
+${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/master/master_task.o
+
+${BINDIR}/annalogger.axf: ${OBJDIR}/pinmux.o
+${BINDIR}/annalogger.axf: ${OBJDIR}/i2c_if.o
+${BINDIR}/annalogger.axf: ${OBJDIR}/uart_if.o
 ${BINDIR}/annalogger.axf: ${OBJDIR}/gpio_if.o
+${BINDIR}/annalogger.axf: ${OBJDIR}/main.o
+
 ${BINDIR}/annalogger.axf: ${OBJDIR}/startup_${COMPILER}.o
 ${BINDIR}/annalogger.axf: ${ROOT}/simplelink/${COMPILER}/${BINDIR}/libsimplelink.a
 ${BINDIR}/annalogger.axf: ${ROOT}/driverlib/${COMPILER}/${BINDIR}/libdriver.a

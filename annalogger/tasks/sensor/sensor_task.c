@@ -29,6 +29,7 @@
 #define SENSOR_TASK_GET_SENSOR_CONFIG_LEN	7
 
 typedef enum _sensor_state_t {
+	ERROR,
 	RESET,
 	STANDBY,
 	ACTIVE

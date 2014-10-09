@@ -16,8 +16,9 @@ obj/main.o: ../main.c /cygdrive/c\cygwin\arm-none-eabi\include\stdlib.h \
  /cygdrive/c\cygwin\lib\gcc\arm-none-eabi\4.8.4\include-fixed\sys\cdefs.h \
  /cygdrive/c\cygwin\arm-none-eabi\include\sys\string.h ../annalogger.h \
  /cygdrive/c\cygwin\lib\gcc\arm-none-eabi\4.8.4\include\stdint.h \
- /cygdrive/c\cygwin\arm-none-eabi\include\stdint.h ../../../oslib/osi.h \
- ../../../simplelink/include/simplelink.h \
+ /cygdrive/c\cygwin\arm-none-eabi\include\stdint.h \
+ /cygdrive/c\cygwin\lib\gcc\arm-none-eabi\4.8.4\include\stdbool.h \
+ ../../../oslib/osi.h ../../../simplelink/include/simplelink.h \
  ../../../simplelink/include/../user.h \
  ../../../simplelink/include/../cc_pal.h \
  ../../../simplelink/include/../source/spawn.h \
@@ -37,5 +38,4 @@ obj/main.o: ../main.c /cygdrive/c\cygwin\arm-none-eabi\include\stdlib.h \
  ../../common/common.h ../../common/uart_if.h ../pinmux.h \
  ../tasks/uart/uart_task.h ../annalogger.h ../tasks/sd/sd_task.h \
  ../tasks/network/network_task.h ../tasks/sensor/sensor_task.h \
- /cygdrive/c\cygwin\lib\gcc\arm-none-eabi\4.8.4\include\stdbool.h \
  ../tasks/master/master_task.h
