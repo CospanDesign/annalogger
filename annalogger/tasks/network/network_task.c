@@ -18,15 +18,17 @@ typedef enum _network_state_t {
 
 void network_task_entry(void *pvParameters){
 	network_state_t state;
+	OsiMsgQ_t neq;
 	nc.al_queues = (al_queues_t *) pvParameters;
 	long retval;
 	al_msg_t msg;
+
+	neq = nc.al_queues->network_queue;
 	
 	state = RESET;
 	retval = 0;
 
 	//let all other threads settle before starting network initialization
-	osi_Sleep(100);
 
 	while (1){
 		
@@ -92,7 +94,7 @@ void network_task_entry(void *pvParameters){
 				NETWORK_PRINT ("Waiting for a device to connect...\n\r");
 
 				//if the previous event requires us to wait for an event, start it
-				retval = osi_MsgQRead(nc.al_queues->network_queue, &msg, OSI_WAIT_FOREVER);
+				retval = osi_MsgQRead(&neq, &msg, OSI_WAIT_FOREVER);
 				if (retval == OSI_OPERATION_FAILED) {
 					NETWORK_PRINT("Error during network queue read...\n\r");
 					state = NW_ERROR;

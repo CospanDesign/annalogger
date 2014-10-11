@@ -82,6 +82,7 @@ IPATH+=../../../driverlib
 IPATH+=../../../simplelink
 IPATH+=../../../simplelink/source
 IPATH+=../../../simplelink/include
+IPATH+=../../../third_party/fatfs
 IPATH+=../../../third_party/FreeRTOS
 IPATH+=../../../third_party/FreeRTOS/source
 IPATH+=../../../third_party/FreeRTOS/source/portable/GCC/ARM_CM4
@@ -131,10 +132,14 @@ ${BINDIR}/annalogger.axf: ${OBJDIR}/bma222_sensor.o
 ${BINDIR}/annalogger.axf: ${OBJDIR}/bma222drv.o
 ${BINDIR}/annalogger.axf: ${OBJDIR}/tmp006drv.o
 endif
+
 ${BINDIR}/annalogger.axf: ${OBJDIR}/sensor.o
 
 ${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/uart/uart_task.o
 ${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/sd/sd_task.o
+${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/sd/ff.o
+${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/sd/diskio.o
+
 #${BINDIR}/annalogger.axf: ${OBJDIR}/network_if.o
 ${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/network/network.o
 ${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/network/network_task.o

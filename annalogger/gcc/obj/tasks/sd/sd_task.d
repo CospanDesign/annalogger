@@ -16,18 +16,9 @@ obj/tasks/sd/sd_task.o: ../tasks/sd/sd_task.c ../tasks/sd/sd_task.h \
  /cygdrive/c\cygwin\lib\gcc\arm-none-eabi\4.8.4\include\stdint.h \
  /cygdrive/c\cygwin\arm-none-eabi\include\stdint.h \
  /cygdrive/c\cygwin\lib\gcc\arm-none-eabi\4.8.4\include\stdbool.h \
- ../../../oslib/osi.h ../../../simplelink/include/simplelink.h \
- ../../../simplelink/include/../user.h \
- /cygdrive/c\cygwin\arm-none-eabi\include\string.h \
- /cygdrive/c\cygwin\lib\gcc\arm-none-eabi\4.8.4\include-fixed\sys\cdefs.h \
- /cygdrive/c\cygwin\arm-none-eabi\include\sys\string.h \
- ../../../simplelink/include/../cc_pal.h \
- ../../../simplelink/include/../source/spawn.h \
- ../../../simplelink/include/../source/objInclusion.h \
- ../../../simplelink/include/trace.h \
- ../../../simplelink/include/simplelink.h \
- ../../../simplelink/include/fs.h ../../../simplelink/include/socket.h \
- ../../../simplelink/include/netapp.h ../../../simplelink/include/wlan.h \
- ../../../simplelink/include/device.h \
- ../../../simplelink/include/netcfg.h \
- ../../../simplelink/include/wlan_rx_filters.h ../../common/uart_if.h
+ ../../../oslib/osi.h ../../common/uart_if.h ../tasks/sd/sd.h \
+ ../../../inc/hw_types.h ../../../driverlib/prcm.h \
+ ../../../driverlib/sdhost.h ../tasks/sd/diskio.h ../tasks/sd/integer.h \
+ ../tasks/sd/ff.h ../../../driverlib/rom_map.h \
+ ../../../driverlib/rom_patch.h ../../../driverlib/rom.h \
+ ../../../inc/hw_memmap.h

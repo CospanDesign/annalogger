@@ -1,6 +1,7 @@
 annalogger/gcc/openocd.log
 annalogger/html/ti
 *.swp
+*.d
 
 # Object files
 *.o

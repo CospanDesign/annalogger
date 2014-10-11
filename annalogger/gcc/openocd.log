@@ -14,3 +14,19 @@ target state: halted
 target halted due to debug-request, current mode: Thread 
 xPSR: 0x41000000 pc: 0x0000230e msp: 0x20003fd0
 Warn : acknowledgment received, but no packet pending
+Warn : Invalid ACK 0 in JTAG-DP transaction
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 100ms
+Warn : target not halted
+Warn : Invalid ACK 0 in JTAG-DP transaction
+Warn : Invalid ACK 0 in JTAG-DP transaction
+Warn : Invalid ACK 0 in JTAG-DP transaction
+Warn : Block read error address 0x20015740
+Warn : Invalid ACK 0 in JTAG-DP transaction
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 300ms
+Warn : Invalid ACK 0x6 in JTAG-DP transaction
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 700ms
+Warn : Invalid ACK 0x6 in JTAG-DP transaction
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 1500ms
+Warn : Invalid ACK 0x6 in JTAG-DP transaction
+Polling target cc3200.cpu failed, GDB will be halted. Polling again in 3100ms
+Info : dropped 'gdb' connection

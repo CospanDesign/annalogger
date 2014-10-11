@@ -359,7 +359,7 @@ void main()
 															(const signed char *) "SD Card FatFS task", \
 															OSI_STACK_SIZE,															\
 															(void *) &al_queues,
-															3,
+															6,
 															NULL);
  
     if(lRetVal < 0)
@@ -373,7 +373,7 @@ void main()
 															(const signed char *) "Sensor task", 	\
 															OSI_STACK_SIZE,												\
 															(void *) &al_queues,
-															6,
+															5,
 															NULL);
  
     if(lRetVal < 0)

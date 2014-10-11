@@ -3,9 +3,15 @@
 
 #include <stdlib.h>
 #include "annalogger.h"
-#include "simplelink.h"
 #include "osi.h"
 #include "uart_if.h"
+
+#ifdef DEBUG_SD
+#define SD_PRINT Report
+#else
+#define SD_PRINT(x,...)
+#endif
+
 
 void sd_task_entry(void *pvParameters);
 
