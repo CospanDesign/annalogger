@@ -1,7 +1,6 @@
-annalogger/gcc/openocd.log
 annalogger/html/ti
 annalogger/gcc/exe/*
-annalogger/gcc/openocd.log
+*.log
 *.swp
 *.d
 
