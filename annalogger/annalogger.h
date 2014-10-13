@@ -36,11 +36,19 @@ typedef struct _queue_struct_t {
 /*End Queue Information */
 
 
+
+//----- DEBUG FLAG -----
+
+#define DEBUG_SENSOR_READ
+
 #define DEBUG_MASTER
 #define DEBUG_SENSOR
 #define DEBUG_UART
 #define DEBUG_SD
 #define DEBUG_NETWORK
+
+//----- DEBUG FLAG END -----
+
 
 #define MASTER_EVENT_SENSOR_IS_ENABLED					2
 #define MASTER_EVENT_SENSOR_GET_CONFIG					3
@@ -68,6 +76,19 @@ typedef struct _queue_struct_t {
 #define SIMPLE_LINK_HTTP_SERVER_EVENT						36
 #define SIMPLE_LINK_SOCKET_EVENT								37
 
+#define NETWORK_EVENT_SENSOR_DATA								38
+
+
+/* UART Events */
+#define UART_EVENT_SENSOR_DATA									64
+
+/* SD Events */
+#define SD_EVENT_SENSOR_DATA										96
+
+/* Sensor Events */
+#define SENSOR_EVENT_NEW_DATA										128
+
+
 //Function Prototypes
 OsiReturnVal_e master_event(uint8_t,
 														int32_t,
@@ -79,6 +100,14 @@ OsiReturnVal_e network_event(uint8_t,
 														void *,
 														OsiTime_t);
 
+OsiReturnVal_e uart_event(uint8_t,
+													int32_t,
+													void *,
+													OsiTime_t);
 
+OsiReturnVal_e sd_event(uint8_t,
+													int32_t,
+													void *,
+													OsiTime_t);
 	
 #endif

@@ -73,7 +73,9 @@ CFLAGS+=-DUSE_FREERTOS
 # Where to find header files that do not live in the source directory.
 #
 IPATH=..
-IPATH+=../sensors
+IPATH+=../tasks/sensor
+IPATH+=../tasks/sd
+IPATH+=../tasks/network
 IPATH+=../..
 IPATH+=../../common
 IPATH+=../../../inc

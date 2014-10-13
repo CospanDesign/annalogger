@@ -48,7 +48,7 @@ void write_sensor_data(sensor_t *sensor, const char * data){
 		sensor->write_sensor_data_fp(sensor, data);
 	}
 }
-void read_sensor_data(sensor_t *sensor, const char * data){
+void read_sensor_data(sensor_t *sensor, char * data){
 	if (sensor->read_sensor_data_fp != NULL){
 		sensor->read_sensor_data_fp(sensor, data);
 	}

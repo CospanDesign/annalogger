@@ -119,6 +119,7 @@ al_queues_t al_queues;
 void vAssertCalled( const char *pcFile, unsigned long ulLine )
 {
     //Handle Assert here
+    Report("%s: Entered\r\n", __func__);
     while(1)
     {
     }
@@ -131,6 +132,7 @@ void vApplicationIdleHook( void)
 
 void vApplicationMallocFailedHook()
 {
+    Report("%s: Entered\r\n", __func__);
     //Handle Memory Allocation Errors
     while(1)
     {
@@ -141,48 +143,71 @@ void vApplicationStackOverflowHook(OsiTaskHandle *pxTask,
                                    signed char *pcTaskName)
 {
     //Handle FreeRTOS Stack Overflow
-		Report ("STACK OVERFLOW!!!\r\n");
+    Report ("STACK OVERFLOW!!!\r\n");
     while(1)
     {
     }
 }
 #endif //USE_FREERTOS
-OsiReturnVal_e generic_enqueue(	OsiMsgQ_t *queue,	
-																uint8_t 	event_type,
-																int32_t 	message_param,
-																void 			*msg,
-																OsiTime_t timeout){
-	al_msg_t m;
-	
-	m.event_type = event_type;
-	m.msg_param = message_param;
-	m.msg = msg;
+OsiReturnVal_e generic_enqueue(  OsiMsgQ_t *queue,  
+                                uint8_t    event_type,
+                                int32_t    message_param,
+                                void      *msg,
+                                OsiTime_t timeout){
+  al_msg_t m;
+  
+  m.event_type = event_type;
+  m.msg_param = message_param;
+  m.msg = msg;
 
-	return osi_MsgQWrite(queue, (void *) &m, timeout);		
+  return osi_MsgQWrite(queue, (void *) &m, timeout);    
 }
 
 
-OsiReturnVal_e master_event(uint8_t 	event_type,
-														int32_t 	message_param,
-														void 			*msg,
-														OsiTime_t timeout){
-	return generic_enqueue(&al_queues.master_event_queue,
-												 event_type,
-												 message_param,
-												 msg,
-												 timeout);
+OsiReturnVal_e master_event(uint8_t    event_type,
+                            int32_t    message_param,
+                            void      *msg,
+                            OsiTime_t timeout){
+  return generic_enqueue(&al_queues.master_event_queue,
+                         event_type,
+                         message_param,
+                         msg,
+                         timeout);
 }
 
-OsiReturnVal_e network_event(uint8_t 	event_type,
-														int32_t 	message_param,
-														void 			*msg,
-														OsiTime_t timeout){
-	return generic_enqueue(&al_queues.network_queue,
-												 event_type,
-												 message_param,
-												 msg,
-												 timeout);
+OsiReturnVal_e network_event(uint8_t  event_type,
+                            int32_t    message_param,
+                            void      *msg,
+                            OsiTime_t timeout){
+  return generic_enqueue(&al_queues.network_queue,
+                         event_type,
+                         message_param,
+                         msg,
+                         timeout);
 }
+
+OsiReturnVal_e uart_event(uint8_t  event_type,
+                            int32_t    message_param,
+                            void      *msg,
+                            OsiTime_t timeout){
+  return generic_enqueue(&al_queues.uart_queue,
+                         event_type,
+                         message_param,
+                         msg,
+                         timeout);
+}
+OsiReturnVal_e sd_event(uint8_t  event_type,
+                            int32_t    message_param,
+                            void      *msg,
+                            OsiTime_t timeout){
+  return generic_enqueue(&al_queues.sd_queue,
+                         event_type,
+                         message_param,
+                         msg,
+                         timeout);
+}
+
+
 
 
 
@@ -218,42 +243,42 @@ BoardInit(void)
 int setup_queues(){
   long lRetVal = -1;
 
-	lRetVal = osi_MsgQCreate(	&al_queues.master_event_queue,
-														"Master Event Queue",
-														sizeof(al_msg_t),
-														MASTER_QUEUE_SIZE);
+  lRetVal = osi_MsgQCreate(  &al_queues.master_event_queue,
+                            "Master Event Queue",
+                            sizeof(al_msg_t),
+                            MASTER_QUEUE_SIZE);
   if(lRetVal < 0){
       ERR_PRINT(lRetVal);
       LOOP_FOREVER();
   }
-	lRetVal = osi_MsgQCreate( &al_queues.sensor_queue,
-														"Sensor Queue",
-														sizeof(al_msg_t), 
-														SENSOR_QUEUE_SIZE);
+  lRetVal = osi_MsgQCreate( &al_queues.sensor_queue,
+                            "Sensor Queue",
+                            sizeof(al_msg_t), 
+                            SENSOR_QUEUE_SIZE);
   if(lRetVal < 0){
       ERR_PRINT(lRetVal);
       LOOP_FOREVER();
   }
-	lRetVal = osi_MsgQCreate(	&al_queues.network_queue,
-														"Network Queue",
-														sizeof(al_msg_t), 
-														NETWORK_QUEUE_SIZE);
+  lRetVal = osi_MsgQCreate(  &al_queues.network_queue,
+                            "Network Queue",
+                            sizeof(al_msg_t), 
+                            NETWORK_QUEUE_SIZE);
   if(lRetVal < 0){
       ERR_PRINT(lRetVal);
       LOOP_FOREVER();
   }
-	lRetVal = osi_MsgQCreate( &al_queues.sd_queue,
-														"SD FatFS Queue",
-														sizeof(al_msg_t),
-														SD_QUEUE_SIZE);
+  lRetVal = osi_MsgQCreate( &al_queues.sd_queue,
+                            "SD FatFS Queue",
+                            sizeof(al_msg_t),
+                            SD_QUEUE_SIZE);
   if(lRetVal < 0){
       ERR_PRINT(lRetVal);
       LOOP_FOREVER();
   }
-	lRetVal = osi_MsgQCreate(	&al_queues.uart_queue,
-														"UART Queue",
-														sizeof(al_msg_t),
-														UART_QUEUE_SIZE);
+  lRetVal = osi_MsgQCreate(  &al_queues.uart_queue,
+                            "UART Queue",
+                            sizeof(al_msg_t),
+                            UART_QUEUE_SIZE);
   if(lRetVal < 0){
       ERR_PRINT(lRetVal);
       LOOP_FOREVER();
@@ -267,7 +292,7 @@ void main()
 {
 
     long lRetVal = -1;
-	
+  
   
     //
     // Board Initialization
@@ -288,9 +313,9 @@ void main()
 #endif
 
 #ifdef USE_LAUNCHPAD
-	launchpad_init();
+  launchpad_init();
 #else
-	Report ("Error: Board is not initialized, Initialize Board!1!\r\n");
+  Report ("Error: Board is not initialized, Initialize Board!1!\r\n");
   LOOP_FOREVER();
 #endif
 
@@ -309,30 +334,30 @@ void main()
         LOOP_FOREVER();
     }
     
-		setup_queues();	
+    setup_queues();  
 
-		//
-		// Setup the main task	
-		//
-		lRetVal = osi_TaskCreate( master_task_entry, 										\
-															(const signed char *) "Master task", 	\
-															OSI_STACK_SIZE, 											\
-															(void *) &al_queues,
-															8,
-															NULL);
+    //
+    // Setup the main task  
+    //
+    lRetVal = osi_TaskCreate( master_task_entry,                    \
+                              (const signed char *) "Master task",  \
+                              OSI_STACK_SIZE,                        \
+                              (void *) &al_queues,
+                              8,
+                              NULL);
     if(lRetVal < 0)
     {
         ERR_PRINT(lRetVal);
         LOOP_FOREVER();
     }
 
-		// Setup the UART task
-		lRetVal = osi_TaskCreate( uart_task_entry, 										\
-															(const signed char *) "UART task",  \
-															OSI_STACK_SIZE,											\
-															(void *) &al_queues,
-															2,
-															NULL);
+    // Setup the UART task
+    lRetVal = osi_TaskCreate( uart_task_entry,                    \
+                              (const signed char *) "UART task",  \
+                              OSI_STACK_SIZE,                      \
+                              (void *) &al_queues,
+                              2,
+                              NULL);
  
     if(lRetVal < 0)
     {
@@ -340,13 +365,13 @@ void main()
         LOOP_FOREVER();
     }
 
-		// Setup the network task
-		lRetVal = osi_TaskCreate( network_task_entry, 									\
-															(const signed char *) "Network task", \
-															OSI_STACK_SIZE, 											\
-															(void *) &al_queues,
-															7,
-															NULL);
+    // Setup the network task
+    lRetVal = osi_TaskCreate( network_task_entry,                    \
+                              (const signed char *) "Network task", \
+                              OSI_STACK_SIZE,                        \
+                              (void *) &al_queues,
+                              7,
+                              NULL);
  
     if(lRetVal < 0)
     {
@@ -354,13 +379,13 @@ void main()
         LOOP_FOREVER();
     }
 
-		// Setup the SD Card FatFS task
-		lRetVal = osi_TaskCreate( sd_task_entry, 															\
-															(const signed char *) "SD Card FatFS task", \
-															OSI_STACK_SIZE,															\
-															(void *) &al_queues,
-															6,
-															NULL);
+    // Setup the SD Card FatFS task
+    lRetVal = osi_TaskCreate( sd_task_entry,                              \
+                              (const signed char *) "SD Card FatFS task", \
+                              OSI_STACK_SIZE,                              \
+                              (void *) &al_queues,
+                              6,
+                              NULL);
  
     if(lRetVal < 0)
     {
@@ -368,13 +393,13 @@ void main()
         LOOP_FOREVER();
     }
 
-		// Setup the sensor task
-		lRetVal = osi_TaskCreate( sensor_task_entry, 										\
-															(const signed char *) "Sensor task", 	\
-															OSI_STACK_SIZE,												\
-															(void *) &al_queues,
-															5,
-															NULL);
+    // Setup the sensor task
+    lRetVal = osi_TaskCreate( sensor_task_entry,                    \
+                              (const signed char *) "Sensor task",  \
+                              OSI_STACK_SIZE,                        \
+                              (void *) &al_queues,
+                              5,
+                              NULL);
  
     if(lRetVal < 0)
     {
@@ -382,7 +407,7 @@ void main()
         LOOP_FOREVER();
     }
 
-	
+  
 
 
     osi_start();

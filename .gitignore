@@ -1,8 +1,8 @@
 annalogger/html/ti
 annalogger/gcc/exe/*
+*.d
 *.log
 *.swp
-*.d
 
 # Object files
 *.o

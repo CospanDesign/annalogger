@@ -40,6 +40,8 @@ void new_bma222_sensor(sensor_t *sensor, uint8_t address){
 	new_sensor(sensor, SENSOR_TYPE, address);
 	sensor->data_len = strlen(bma222_read_data) + 10;
 	sensor->data = calloc(sensor->data_len, sizeof(char));
+  sensor->write_sensor_data_fp = &bma222_write_sensor_data;
+  sensor->read_sensor_data_fp = &bma222_read_sensor_data;
 	bma222_read_sensor_config(sensor);
 	BMA222Open();
 }
@@ -53,7 +55,7 @@ void bma222_read_sensor_config(sensor_t *sensor){
 void bma222_write_sensor_data(sensor_t *sensor, const char * data){
 }
 
-void bma222_read_sensor_data(sensor_t *sensor, const char * data){
+void bma222_read_sensor_data(sensor_t *sensor, char * data){
 	signed char x;
 	signed char y;
 	signed char z;
