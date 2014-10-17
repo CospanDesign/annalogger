@@ -1,5 +1,5 @@
-#Thu Oct 09 10:09:24 EDT 2014
-capacity=1MB
+#Thu Oct 16 13:14:15 EDT 2014
+capacity=2MB
 com=41
 interface=CC3x Serial(UART) Interface
 device=SimpleLink Wifi CC3100/CC3200

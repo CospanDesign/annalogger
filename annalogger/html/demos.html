@@ -4,30 +4,52 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="css/style.css" >
+
 <script src="js/jquery-1.8.3.min.js"></script>
-<script src="js/com.TI.tokenPoller.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/chartController.js"></script>
 <script src="js/page-actions.js"></script>
 
+<script type="text/javascript">
 
-<title>Demo</title>
+$(function() {
+  var deviceType = "__SL_G_V.D",
+    len = deviceType.length,
+    deviceTypeEnd = deviceType.substring(len-2,len),
+    cc3101Vals = ['10','11','13'];
+  if ($.inArray(deviceTypeEnd, cc3101Vals) > -1) {
+    $('span.deviceName').html('CC3200');
+  } else {
+    $('span.deviceName').html('CC3100');
+  }
+});
+
+
+</script>
+<title>Demos</title>
 </head>
 <body>
+
 <div class="header">
+
   <div class="page-title"></div>
   <div class="blue-bar"> <img class="cd-logo-white" src="images/CDSmall.png"> Annalogger</div>
   <div class="status-bar"> Current Status: <em>Offline</em></div> 
+
 </div>
+
 
 <div class="tabs">
 <ul>
-	<li class="" id="Main"><a href="index.html"><span>Welcome</span></a></li>
-  <li class="" id="setup"><a href="setup.html"><span>Setup</span></a></li>
-	<li class="" id="demo"><a href="demos.html"><span>Demos</span></a></li>
+  <li class=""        id="main">  <a href="index.html"><span>Main</span></a></li>
+  <li class=""        id="viewer"><a href="viewer.html"><span>Viewer</span></a></li>
+  <li class="active"  id="demos"> <a href="demos.html"><span>Demo</span></a></li>
+  <li class=""        id="setup"> <a href="setup.html"><span>Setup</span></a></li>
 </ul>
 </div>
 
-<br />
-<br />
+<br>
+<br>
 
 <div class="footer"><a href="http://www.cospandesign.com">Cospan Design</a></div>
 </body>

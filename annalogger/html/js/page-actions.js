@@ -83,8 +83,10 @@ $(document).ready(function(){
 		};
 	}
 
+  /*
 	// initialize online status polling
 	var statusBar = $('div.header div.status-bar'),
+    
 		onlineStatus = new com.TI.tokenPoller({
 			"paramPage": "param_online.html", 
 			"refreshRate": 5 * 1000,	// every 5 seconds
@@ -115,7 +117,8 @@ $(document).ready(function(){
 		statusBar.removeClass('online');
 		com.TI.tempVarKeeper.set(ONLINE_STATUS_KEY,"");
 	}
+  */
 
     // turn off the LED in case the user came from another demo
-    com.TI.toggleLED('_OFF');
+    //com.TI.toggleLED('_OFF');
 });

@@ -57,7 +57,10 @@ typedef struct _queue_struct_t {
 #define MASTER_EVENT_NETWORK_IS_READY						6
 #define MASTER_EVENT_NETWORK_EVENT_TIMEOUT			7
 #define MASTER_EVENT_NETWORK_ERROR_AP_CONNECT		8
-#define MASTER_EVENT_SD_IS_READY								9
+#define MASTER_EVENT_NETWORK_ERROR_WS_CONNECT   9
+#define MASTER_EVENT_NETWORK_GENERAL_ERROR      10
+#define MASTER_EVENT_SD_IS_READY								11
+#define MASTER_EVENT_MALLOC_FAILED              12
 
 #define NETWORK_EVENT_RESTART										32
 
@@ -76,7 +79,8 @@ typedef struct _queue_struct_t {
 #define SIMPLE_LINK_HTTP_SERVER_EVENT						36
 #define SIMPLE_LINK_SOCKET_EVENT								37
 
-#define NETWORK_EVENT_SENSOR_DATA								38
+
+#define NETWORK_EVENT_SENSOR_DATA								40
 
 
 /* UART Events */
@@ -90,24 +94,24 @@ typedef struct _queue_struct_t {
 
 
 //Function Prototypes
-OsiReturnVal_e master_event(uint8_t,
-														int32_t,
-														void *,
-														OsiTime_t);
+OsiReturnVal_e master_event(  uint8_t,
+														  int32_t,
+														  void *,
+														  OsiTime_t);
 
-OsiReturnVal_e network_event(uint8_t,
-														int32_t,
-														void *,
-														OsiTime_t);
+OsiReturnVal_e network_event( uint8_t,
+														  int32_t,
+														  void *,
+														  OsiTime_t);
 
-OsiReturnVal_e uart_event(uint8_t,
-													int32_t,
-													void *,
-													OsiTime_t);
+OsiReturnVal_e uart_event(    uint8_t,
+													    int32_t,
+													    void *,
+													    OsiTime_t);
 
-OsiReturnVal_e sd_event(uint8_t,
-													int32_t,
-													void *,
-													OsiTime_t);
+OsiReturnVal_e sd_event(      uint8_t,
+															int32_t,
+															void *,
+															OsiTime_t);
 	
 #endif

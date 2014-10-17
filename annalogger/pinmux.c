@@ -132,9 +132,6 @@ PinMuxConfig(void)
 
 
 
-
-
-
 #else
     MAP_PRCMPeripheralClkEnable(PRCM_UARTA0, PRCM_RUN_MODE_CLK);
     //

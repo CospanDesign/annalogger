@@ -128,12 +128,12 @@ void sensor_task_entry(void *pvParameters){
         }
         break;
       case (ACTIVE):
-        SENSOR_PRINT ("sensor task (ACTIVE) still alive\n\r");
+        //SENSOR_PRINT ("sensor task (ACTIVE) still alive\n\r");
         retval = osi_MsgQRead(&sq, &msg, SENSOR_TASK_TIMEOUT);
-        SENSOR_PRINT ("sensor task (ACTIVE) Received event! (retval: %d)\n\r", retval);
+        //SENSOR_PRINT ("sensor task (ACTIVE) Received event! (retval: %d)\n\r", retval);
         
         if (retval == OSI_OPERATION_FAILED) {
-          SENSOR_PRINT("%s: Timeout condition occured\r\n", __func__);
+          //SENSOR_PRINT("%s: Timeout condition occured\r\n", __func__);
           poll = true;
         }
         else if (retval != 0) {
@@ -157,7 +157,7 @@ void sensor_task_entry(void *pvParameters){
       //In active state need to read from the sensors
       //Reset the poll
       poll = false;
-      SENSOR_PRINT("%s: Processing 'Poll Event'\r\n", __func__);
+      //SENSOR_PRINT("%s: Processing 'Poll Event'\r\n", __func__);
 			//Update all sensor data
 			read_all_sensors();
 

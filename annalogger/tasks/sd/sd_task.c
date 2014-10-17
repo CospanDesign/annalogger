@@ -18,10 +18,10 @@
 
 
 typedef enum _sd_state_t {
-	ERROR,
-	RESET,
-	INIT,
-	READY
+  ERROR,
+  RESET,
+  INIT,
+  READY
 } sd_state_t;
 
 //****************************************************************************
@@ -68,51 +68,60 @@ void sd_task_entry(void *pvParameters){
   FRESULT res;
   DIR dir;
   WORD Size;
-	OsiMsgQ_t seq;
-	char buffer[100];
-	sd_controller_t sc;
-	al_msg_t msg;
-	sd_state_t state;
 
-	long retval;
+  OsiMsgQ_t seq;
+  char buffer[100];
+  sd_controller_t sc;
+  al_msg_t msg;
+  sd_state_t state;
+
+  long retval;
 
 
-	sc.al_queues = (al_queues_t *) pvParameters;
-	seq = sc.al_queues->network_queue;
-	
-	state = RESET;
+  sc.al_queues = (al_queues_t *) pvParameters;
+  seq = sc.al_queues->network_queue;
+  
+  state = RESET;
+//MAY NOT NEED SLEEP!
+  osi_Sleep(2000);
+//___END
 
-	while (1){
-		switch(state){
-			case (ERROR):
-				osi_Sleep(1000);
-				SD_PRINT("%s: ERROR\r\n", __func__);
-				break;
-			case (RESET):
-				SD_PRINT("%s: RESET\r\n", __func__);
-				state = INIT;
-				break;
-			case (INIT):
-			  //Reset MMCHS
-  			MAP_PRCMPeripheralReset(PRCM_SDHOST);
+  while (1){
+    switch(state){
+      case (ERROR):
+        osi_Sleep(1000);
+        SD_PRINT("%s: ERROR\r\n", __func__);
+        break;
+      case (RESET):
+        SD_PRINT("%s: RESET\r\n", __func__);
+        state = INIT;
+        break;
+      case (INIT):
+        //Reset MMCHS
 
-  			// Configure MMCHS
-  			MAP_SDHostInit(SDHOST_BASE);
 
-  			// Configure card clock
-  			MAP_SDHostSetExpClk(SDHOST_BASE,
-  			                    MAP_PRCMPeripheralClockGet(PRCM_SDHOST),15000000);
-  			//MAP_SDHostSetExpClk(SDHOST_BASE,
-        //              MAP_PRCMPeripheralClockGet(PRCM_SDHOST),1000000);
 
-  			SD_PRINT("%s: Mounting SD Card\r\n", __func__);
-        f_mount(0,&fs);
+        MAP_PRCMPeripheralReset(PRCM_SDHOST);
+
+
+        // Configure MMCHS
+        MAP_SDHostInit(SDHOST_BASE);
+
+        // Configure card clock
+        //MAP_SDHostSetExpClk(SDHOST_BASE,
+        //                    MAP_PRCMPeripheralClockGet(PRCM_SDHOST),15000000);
+        MAP_SDHostSetExpClk(SDHOST_BASE,
+                      MAP_PRCMPeripheralClockGet(PRCM_SDHOST),1000000);
+
+        SD_PRINT("%s: Mounting SD Card\r\n", __func__);
+        f_mount(0, &fs);
+        SD_PRINT("%s: Mounted SD Card\r\n", __func__);
    
         res = f_opendir(&dir,"/");
+
         if( res == FR_OK)
         {
             SD_PRINT("Opening root directory.................... [ok]\n\n\r");
-            SD_PRINT("/\n\r");
             ListDirectory(&dir);
         }
         else
@@ -120,7 +129,7 @@ void sd_task_entry(void *pvParameters){
             SD_PRINT("Opening root directory.................... [Failed]\n\n\r");
         }
     
-				/*
+        /*
         SD_PRINT("\n\rReading user file...\n\r");
         res = f_open(&fp,USERFILE,FA_READ);
         if(res == FR_OK)
@@ -147,28 +156,28 @@ void sd_task_entry(void *pvParameters){
         {
             SD_PRINT("Failed to create a new file\n\r");
         }
-				*/
-				state = READY;
+        */
+        state = READY;
 
-				break;
-			case (READY):
-  			SD_PRINT("%s: READY\r\n", __func__);
-				retval = master_event(MASTER_EVENT_SD_IS_READY, 0, NULL, 10);
-				retval = osi_MsgQRead(&seq, &msg, OSI_WAIT_FOREVER);
-				if (retval == OSI_OPERATION_FAILED){
-					SD_PRINT("%s: Error durring queue read\r\n");
-					state = ERROR;
-					continue;
-				}
-				SD_PRINT("%s: Received a message on SD Queue\r\n");
-				//Write data to SD Card
-				//Read data from SD Card and send it to ???
-				
-				
-				break;
-			default:
-				state = ERROR;
-				break;
-		}
-	}
+        break;
+      case (READY):
+        SD_PRINT("%s: READY\r\n", __func__);
+        retval = master_event(MASTER_EVENT_SD_IS_READY, 0, NULL, 10);
+        retval = osi_MsgQRead(&seq, &msg, OSI_WAIT_FOREVER);
+        if (retval == OSI_OPERATION_FAILED){
+          SD_PRINT("%s: Error durring queue read\r\n", __func__);
+          state = ERROR;
+          continue;
+        }
+        SD_PRINT("%s: Received a message on SD Queue\r\n", __func__);
+        //Write data to SD Card
+        //Read data from SD Card and send it to ???
+        
+        
+        break;
+      default:
+        state = ERROR;
+        break;
+    }
+  }
 }

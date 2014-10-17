@@ -84,6 +84,7 @@ IPATH+=../../../driverlib
 IPATH+=../../../simplelink
 IPATH+=../../../simplelink/source
 IPATH+=../../../simplelink/include
+IPATH+=../../../netapps/http/server
 IPATH+=../../../third_party/fatfs
 IPATH+=../../../third_party/FreeRTOS
 IPATH+=../../../third_party/FreeRTOS/source
@@ -143,6 +144,7 @@ ${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/sd/ff.o
 ${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/sd/diskio.o
 
 #${BINDIR}/annalogger.axf: ${OBJDIR}/network_if.o
+${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/network/ws_list.o
 ${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/network/network.o
 ${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/network/network_task.o
 ${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/network/network_ap.o
@@ -160,6 +162,7 @@ ${BINDIR}/annalogger.axf: ${OBJDIR}/startup_${COMPILER}.o
 ${BINDIR}/annalogger.axf: ${ROOT}/simplelink/${COMPILER}/${BINDIR}/libsimplelink.a
 ${BINDIR}/annalogger.axf: ${ROOT}/driverlib/${COMPILER}/${BINDIR}/libdriver.a
 ${BINDIR}/annalogger.axf: ${ROOT}/oslib/${COMPILER}/${BINDIR}/FreeRTOS.a
+#${BINDIR}/annalogger.axf: ${ROOT}/netapps/http/server/gcc/exe/libwebserver.a
 SCATTERgcc_annalogger=annalogger.ld
 ENTRY_annalogger=ResetISR
 

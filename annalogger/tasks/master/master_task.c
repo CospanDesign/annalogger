@@ -49,8 +49,8 @@ void master_task_entry(void *pvParameters){
 	while (1){
 		retval = osi_MsgQRead(&meq, &msg, MASTER_TASK_TIMEOUT);
 		if (retval == OSI_OPERATION_FAILED) {
-			MASTER_PRINT ("master task alive\n\r");
-			MASTER_PRINT ("exited Master Queue Read from timeout\n\r");
+			//MASTER_PRINT ("master task alive\n\r");
+			//MASTER_PRINT ("exited Master Queue Read from timeout\n\r");
 		}
 		else {
 			MASTER_PRINT ("Master Task: Received event: %d\n\r", msg.event_type);
