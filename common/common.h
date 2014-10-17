@@ -59,19 +59,11 @@ extern "C"
 //
 
 //Defaults
-//#define SSID_NAME           "cc3200demo"    /* AP SSID */
-//#define SECURITY_TYPE       SL_SEC_TYPE_OPEN/* Security type (OPEN or WEP or WPA*/
-//#define SECURITY_KEY        ""              /* Password of the secured AP */
-//#define SSID_LEN_MAX        32
-//#define BSSID_LEN_MAX       6
-
-#define SSID_NAME          	"Industry Lab 3B"    	/* AP SSID */
-#define SECURITY_TYPE       SL_SEC_TYPE_WPA 			/* Security type (OPEN or WEP or WPA*/
-#define SECURITY_KEY        "build some stuff"    /* Password of the secured AP */
+#define SSID_NAME           "cc3200demo"    /* AP SSID */
+#define SECURITY_TYPE       SL_SEC_TYPE_OPEN/* Security type (OPEN or WEP or WPA*/
+#define SECURITY_KEY        ""              /* Password of the secured AP */
 #define SSID_LEN_MAX        32
 #define BSSID_LEN_MAX       6
-
-
 
 
 #ifdef NOTERM
