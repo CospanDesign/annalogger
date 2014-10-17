@@ -119,7 +119,7 @@ typedef enum{
     STATUS_BIT_IP_LEASED,         // If this bit is set: the device has leased IP to 
                                   // any connected client
                                   
-    STATUS_BIT_IP_AQUIRED,        // If this bit is set: the device has acquired an IP
+    STATUS_BIT_IP_ACQUIRED,        // If this bit is set: the device has acquired an IP
     
     STATUS_BIT_SMARTCONFIG_START, // If this bit is set: the SmartConfiguration 
                                   // process is started from SmartConfig app
@@ -152,7 +152,7 @@ typedef enum{
 #define IS_IP_LEASED(status_variable)        GET_STATUS_BIT(status_variable,\
                                                            STATUS_BIT_IP_LEASED)
 #define IS_IP_ACQUIRED(status_variable)       GET_STATUS_BIT(status_variable,\
-                                                          STATUS_BIT_IP_AQUIRED)
+                                                          STATUS_BIT_IP_ACQUIRED)
 #define IS_SMART_CFG_START(status_variable)  GET_STATUS_BIT(status_variable,\
                                                    STATUS_BIT_SMARTCONFIG_START)
 #define IS_P2P_DEV_FOUND(status_variable)    GET_STATUS_BIT(status_variable,\
