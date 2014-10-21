@@ -17,7 +17,7 @@
 #define UART_QUEUE_SIZE			32
 #define SD_QUEUE_SIZE				32
 #define NETWORK_QUEUE_SIZE	32
-
+#define HTTP_QUEUE_SIZE	    10
 
 typedef struct _al_msg_t {
 	uint8_t event_type;
@@ -29,13 +29,12 @@ typedef struct _queue_struct_t {
 	OsiMsgQ_t master_event_queue;
 	OsiMsgQ_t sensor_queue;
 	OsiMsgQ_t network_queue;	
+	OsiMsgQ_t http_queue;	
 	OsiMsgQ_t sd_queue;
 	OsiMsgQ_t uart_queue;
 } al_queues_t;
 
 /*End Queue Information */
-
-
 
 //----- DEBUG FLAG -----
 
@@ -46,9 +45,9 @@ typedef struct _queue_struct_t {
 #define DEBUG_UART
 #define DEBUG_SD
 #define DEBUG_NETWORK
+#define DEBUG_HTTP
 
 //----- DEBUG FLAG END -----
-
 
 #define MASTER_EVENT_SENSOR_IS_ENABLED					2
 #define MASTER_EVENT_SENSOR_GET_CONFIG					3
@@ -61,6 +60,7 @@ typedef struct _queue_struct_t {
 #define MASTER_EVENT_NETWORK_GENERAL_ERROR      10
 #define MASTER_EVENT_SD_IS_READY								11
 #define MASTER_EVENT_MALLOC_FAILED              12
+#define MASTER_EVENT_HTTP_ERROR                 13
 
 #define NETWORK_EVENT_RESTART										32
 
@@ -82,6 +82,8 @@ typedef struct _queue_struct_t {
 
 #define NETWORK_EVENT_SENSOR_DATA								40
 
+#define HTTP_EVENT_START_SERVER                 56
+
 
 /* UART Events */
 #define UART_EVENT_SENSOR_DATA									64
@@ -100,6 +102,11 @@ OsiReturnVal_e master_event(  uint8_t,
 														  OsiTime_t);
 
 OsiReturnVal_e network_event( uint8_t,
+														  int32_t,
+														  void *,
+														  OsiTime_t);
+
+OsiReturnVal_e http_event(    uint8_t,
 														  int32_t,
 														  void *,
 														  OsiTime_t);

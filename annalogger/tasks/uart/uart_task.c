@@ -9,7 +9,6 @@
 #define UART_PRINT(x,...)
 #endif
 
-
 void uart_task_entry(void *pvParameters){
 
   OsiMsgQ_t uq;
@@ -51,5 +50,4 @@ void uart_task_entry(void *pvParameters){
     }
   }
 }
-
 

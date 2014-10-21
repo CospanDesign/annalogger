@@ -126,15 +126,11 @@ void network_task_entry(void *pvParameters){
 				break;
 		}
 
-
-
-
 	  if (retval == OSI_OPERATION_FAILED) {
 		  NETWORK_PRINT("Error during network queue read...\n\r");
 		  state = NW_ERROR;
       continue;
 	  }
-
 
     //Process an incomming event
     switch (msg.event_type){

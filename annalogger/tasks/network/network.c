@@ -175,7 +175,7 @@ void SimpleLinkGeneralEventHandler(SlDeviceEvent_t *pDevEvent)
   // Most of the general errors are not FATAL are are to be handled
   // appropriately by the application
   //
-  NETWORK_PRINT("[GENERAL EVENT] - ID=[%d] Sender=[%d]\n\n",
+  NETWORK_PRINT("[GENERAL EVENT] - ID=[%d] Sender=[%d]\r\n",
              pDevEvent->EventData.deviceEvent.status, 
              pDevEvent->EventData.deviceEvent.sender);
 }
@@ -191,83 +191,24 @@ void SimpleLinkSockEventHandler(SlSockEvent_t *pSock)
       switch( pSock->EventData.status )
       {
         case SL_ECLOSE: 
-          NETWORK_PRINT("[SOCK ERROR] - close socket (%d) operation "
-                      "failed to transmit all queued packets\n\n", 
+          NETWORK_PRINT("[SOCK ERROR] - close socket (%d) operation failed to transmit all queued packets\r\n", 
                       pSock->EventData.sd);
           break;
         default: 
-          NETWORK_PRINT("[SOCK ERROR] - TX FAILED : socket %d , reason"
-                        "(%d) \n\n",
+          NETWORK_PRINT("[SOCK ERROR] - TX FAILED : socket %d , reason (%d) \r\n",
                         pSock->EventData.sd, pSock->EventData.status);
           break;
       }
       break;
 
     default:
-      NETWORK_PRINT("[SOCK EVENT] - Unexpected Event [%x0x]\n\n",pSock->Event);
+      NETWORK_PRINT("[SOCK EVENT] - Unexpected Event [%x0x]\r\n",pSock->Event);
       break;
   }
 }
 
-/*!
- * 	\brief 							Parse entire websocket packet and forward only the payload to the user API.
- *									The API can handle packets received in parts. It is blocked till entire packet is received.
- *
- *
- * 	\param[in] uConnection			Connection number on HTTP server. The library supports 4.
- * 	\param[in] *pData				Pointer to the HttpBlob structure that holds the data.
- *
- * 	\return							1 - If packet was successfully received, parsed and sent to the user API
- *     								0 - Error
- */
-int WSCore_DataRecv(UINT16 uConnection, struct HttpBlob* pData)
-{
-}
-
-/*!
- * 	\brief 							Returns status string according to status code.
- *
- * 	\param[in] WSStatus				Status code of the websocket packet
- * 	\param[in] *status				String pointer to the message for the status
- *
- * 	\return							void
- */
-
-void WSStatusString(UINT32 WSStatus, struct HttpBlob* status)
-{
-}
-
-
 
 /* Web Socket Events */
-
-/*!
- * 	\brief 						 Sends data to a websocket client . * 								
- *
- * 	\param[in] uConnection			Connection number on HTTP server. 
- * 	\param[in] PayLoad			Structure holding the payload data and the size of the data
- * 	\param[in] Opcode				User provides data type (text/binary/ping/pong/close).
- *
- * 	\return						1 - If packet was successfully received, parsed and sent to the user API
- *     							0 - Error
- */
-int WSCore_DataSend(UINT16 uConnection, struct HttpBlob PayLoad, UINT8 Opcode)
-{
-}
-
-/*!
- * 	\brief 							Parses the payload length to the header if it is more than 125 ie (16 bit/64 bit)
- *
- * 	\param[in] *pData				Pointer to the websocket packet
- * 	\param[in] iter					iter = 2 for 16 bit length
- * 									iter = 8 for 64 bit length
- *
- *
- * 	\return							size of the payload
- */
-long long Payloadlength(struct HttpBlob * pData, UINT8 iter)
-{
-}
 
 /*!
  * 	\brief 					This websocket Event is called when WebSocket Server receives data
@@ -280,6 +221,7 @@ long long Payloadlength(struct HttpBlob * pData, UINT8 iter)
  * 	\return					none.
  *     					
  */
+
 void WebSocketRecvEventHandler(UINT16 uConnection, char *ReadBuffer)
 {
   NETWORK_PRINT("[WEB SOCKET EVENT]: Received from client!\r\n");
@@ -298,28 +240,26 @@ void WebSocketRecvEventHandler(UINT16 uConnection, char *ReadBuffer)
 void WebSocketHandshakeEventHandler(UINT16 uConnection)
 {
   NETWORK_PRINT("[WEB SOCKET EVENT]: Handshake!\r\n");
+  /*
   ws_conn_t * ws_conn = calloc(1, sizeof(ws_conn_t));
 
   if (ws_conn == NULL){
-    /*
-    NETWORK_PRINT(
-      "Failed to allocate space for a web socket connection\r\n");
-    master_event( MASTER_EVENT_MALLOC_FAILED,
-                  0,
-                  NULL,
-                  0);
-    */
+    //NETWORK_PRINT(
+    //  "Failed to allocate space for a web socket connection\r\n");
+    //master_event( MASTER_EVENT_MALLOC_FAILED,
+    //              0,
+    //              NULL,
+    //              0);
     return;
   }
   if (!wsl_add(nc.ws_list, uConnection, ws_conn)){
-    /*
-    NETWORK_PRINT("Failed to add space to the socket list\r\n");
-    master_event( MASTER_EVENT_NETWORK_GENERAL_ERROR,
-                  0,
-                  NULL,
-                  0);
-    */
+    //NETWORK_PRINT("Failed to add space to the socket list\r\n");
+    //master_event( MASTER_EVENT_NETWORK_GENERAL_ERROR,
+    //              0,
+    //              NULL,
+    //              0);
   }
+  */
   
 }
 

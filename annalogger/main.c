@@ -90,6 +90,7 @@
 #include "tasks/network/network_task.h"
 #include "tasks/sensor/sensor_task.h"
 #include "tasks/master/master_task.h"
+#include "tasks/http/http_task.h"
 
 
 #define APP_NAME                "Annalogger"
@@ -186,6 +187,17 @@ OsiReturnVal_e network_event(uint8_t  event_type,
                          timeout);
 }
 
+OsiReturnVal_e http_event(uint8_t  event_type,
+                            int32_t    message_param,
+                            void      *msg,
+                            OsiTime_t timeout){
+  return generic_enqueue(&al_queues.http_queue,
+                         event_type,
+                         message_param,
+                         msg,
+                         timeout);
+}
+
 OsiReturnVal_e uart_event(uint8_t  event_type,
                             int32_t    message_param,
                             void      *msg,
@@ -207,12 +219,7 @@ OsiReturnVal_e sd_event(uint8_t  event_type,
                          timeout);
 }
 
-
-
-
-
-static void
-DisplayBanner(char * AppName)
+static void DisplayBanner(char * AppName)
 {
     Report("\n\n\n\r");
     Report("\t\t *************************************************\n\r");
@@ -221,8 +228,7 @@ DisplayBanner(char * AppName)
     Report("\n\n\n\r");
 }
 
-static void
-BoardInit(void)
+static void BoardInit(void)
 {
 /* In case of TI-RTOS vector table is initialize by OS itself */
 #ifndef USE_TIRTOS
@@ -241,48 +247,38 @@ BoardInit(void)
 }
 
 int setup_queues(){
-  long lRetVal = -1;
+  long retval = -1;
 
-  lRetVal = osi_MsgQCreate(  &al_queues.master_event_queue,
+  retval = osi_MsgQCreate(  &al_queues.master_event_queue,
                             "Master Event Queue",
                             sizeof(al_msg_t),
                             MASTER_QUEUE_SIZE);
-  if(lRetVal < 0){
-      ERR_PRINT(lRetVal);
-      LOOP_FOREVER();
-  }
-  lRetVal = osi_MsgQCreate( &al_queues.sensor_queue,
+  ASSERT_ON_ERROR(retval);
+  retval = osi_MsgQCreate( &al_queues.sensor_queue,
                             "Sensor Queue",
                             sizeof(al_msg_t), 
                             SENSOR_QUEUE_SIZE);
-  if(lRetVal < 0){
-      ERR_PRINT(lRetVal);
-      LOOP_FOREVER();
-  }
-  lRetVal = osi_MsgQCreate(  &al_queues.network_queue,
+  ASSERT_ON_ERROR(retval);
+  retval = osi_MsgQCreate(  &al_queues.network_queue,
                             "Network Queue",
                             sizeof(al_msg_t), 
                             NETWORK_QUEUE_SIZE);
-  if(lRetVal < 0){
-      ERR_PRINT(lRetVal);
-      LOOP_FOREVER();
-  }
-  lRetVal = osi_MsgQCreate( &al_queues.sd_queue,
+  ASSERT_ON_ERROR(retval);
+  retval = osi_MsgQCreate(  &al_queues.http_queue,
+                            "HTTP Command Queue",
+                            sizeof(al_msg_t), 
+                            HTTP_QUEUE_SIZE);
+  ASSERT_ON_ERROR(retval);
+  retval = osi_MsgQCreate( &al_queues.sd_queue,
                             "SD FatFS Queue",
                             sizeof(al_msg_t),
                             SD_QUEUE_SIZE);
-  if(lRetVal < 0){
-      ERR_PRINT(lRetVal);
-      LOOP_FOREVER();
-  }
-  lRetVal = osi_MsgQCreate(  &al_queues.uart_queue,
+  ASSERT_ON_ERROR(retval);
+  retval = osi_MsgQCreate(  &al_queues.uart_queue,
                             "UART Queue",
                             sizeof(al_msg_t),
                             UART_QUEUE_SIZE);
-  if(lRetVal < 0){
-      ERR_PRINT(lRetVal);
-      LOOP_FOREVER();
-  }
+  ASSERT_ON_ERROR(retval);
 }
 
 //*****************************************************************************
@@ -291,7 +287,7 @@ int setup_queues(){
 void main()
 {
 
-    long lRetVal = -1;
+    long retval = -1;
   
   
     //
@@ -327,10 +323,10 @@ void main()
     //
     // Start the SimpleLink Host
     //
-    lRetVal = VStartSimpleLinkSpawnTask(SPAWN_TASK_PRIORITY);
-    if(lRetVal < 0)
+    retval = VStartSimpleLinkSpawnTask(SPAWN_TASK_PRIORITY);
+    if(retval < 0)
     {
-        ERR_PRINT(lRetVal);
+        ERR_PRINT(retval);
         LOOP_FOREVER();
     }
     
@@ -339,71 +335,86 @@ void main()
     //
     // Setup the main task  
     //
-    lRetVal = osi_TaskCreate( master_task_entry,                    \
-                              (const signed char *) "Master task",  \
-                              OSI_STACK_SIZE,                        \
-                              (void *) &al_queues,
-                              8,
-                              NULL);
-    if(lRetVal < 0)
+    retval = osi_TaskCreate( master_task_entry,                            
+                             (const signed char *) "Master task",          
+                             OSI_STACK_SIZE,                               
+                             (void *) &al_queues,
+                             7,
+                             NULL);
+    if(retval < 0)
     {
-        ERR_PRINT(lRetVal);
+        ERR_PRINT(retval);
         LOOP_FOREVER();
     }
 
     // Setup the UART task
-    lRetVal = osi_TaskCreate( uart_task_entry,                    \
-                              (const signed char *) "UART task",  \
-                              OSI_STACK_SIZE,                      \
-                              (void *) &al_queues,
-                              2,
-                              NULL);
+    retval = osi_TaskCreate( uart_task_entry,                              
+                             (const signed char *) "UART task",            
+                             OSI_STACK_SIZE,                               
+                             (void *) &al_queues,
+                             2,
+                             NULL);
  
-    if(lRetVal < 0)
+    if(retval < 0)
     {
-        ERR_PRINT(lRetVal);
+        ERR_PRINT(retval);
         LOOP_FOREVER();
     }
 
     // Setup the network task
-    lRetVal = osi_TaskCreate( network_task_entry,                    \
-                              (const signed char *) "Network task", \
-                              OSI_STACK_SIZE,                        \
-                              (void *) &al_queues,
-                              7,
-                              NULL);
+    retval = osi_TaskCreate( network_task_entry,                           
+                             (const signed char *) "Network task",         
+                             OSI_STACK_SIZE,                               
+                             (void *) &al_queues,
+                             6,
+                             NULL);
  
-    if(lRetVal < 0)
+    if(retval < 0)
     {
-        ERR_PRINT(lRetVal);
+        ERR_PRINT(retval);
         LOOP_FOREVER();
     }
 
-    // Setup the SD Card FatFS task
-    lRetVal = osi_TaskCreate( sd_task_entry,                              \
-                              (const signed char *) "SD Card FatFS task", \
-                              OSI_STACK_SIZE,                              \
-                              (void *) &al_queues,
-                              6,
-                              NULL);
+    retval = osi_TaskCreate( http_task_entry,                              
+                             (const signed char *) "HTTP Server task",     
+                             OSI_STACK_SIZE,                               
+                             (void *) &al_queues,
+                             8,
+                             NULL);
  
-    if(lRetVal < 0)
+    if(retval < 0)
     {
-        ERR_PRINT(lRetVal);
+        ERR_PRINT(retval);
+        LOOP_FOREVER();
+    }
+
+
+
+    // Setup the SD Card FatFS task
+    retval = osi_TaskCreate( sd_task_entry,                             
+                             (const signed char *) "SD Card FatFS task",
+                             OSI_STACK_SIZE,                            
+                             (void *) &al_queues,
+                             5,
+                             NULL);
+ 
+    if(retval < 0)
+    {
+        ERR_PRINT(retval);
         LOOP_FOREVER();
     }
 
     // Setup the sensor task
-    lRetVal = osi_TaskCreate( sensor_task_entry,                    \
-                              (const signed char *) "Sensor task",  \
-                              OSI_STACK_SIZE,                        \
-                              (void *) &al_queues,
-                              5,
-                              NULL);
+    retval = osi_TaskCreate( sensor_task_entry,                        
+                             (const signed char *) "Sensor task",      
+                             OSI_STACK_SIZE,                           
+                             (void *) &al_queues,
+                             4,
+                             NULL);
  
-    if(lRetVal < 0)
+    if(retval < 0)
     {
-        ERR_PRINT(lRetVal);
+        ERR_PRINT(retval);
         LOOP_FOREVER();
     }
 

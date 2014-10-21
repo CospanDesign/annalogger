@@ -40,6 +40,8 @@
 # The base directory.
 #
 ROOT=../../..
+TARGET=${BINDIR}/annalogger.axf
+HTTP_SERVER_PATH=netapps/http/server
 
 #
 # Include the common make definitions.
@@ -52,6 +54,7 @@ include ${ROOT}/tools/gcc_scripts/makedefs
 VPATH=..
 VPATH+=../../drivers
 VPATH+=../../common
+VPATH+=${ROOT}/${HTTP_SERVER_PATH}
 
 
 #Uncomment the line below to use the launchpad platform instead of annalogger board
@@ -73,10 +76,11 @@ CFLAGS+=-DUSE_FREERTOS
 # Where to find header files that do not live in the source directory.
 #
 IPATH=..
+IPATH+=../..
 IPATH+=../tasks/sensor
 IPATH+=../tasks/sd
 IPATH+=../tasks/network
-IPATH+=../..
+IPATH+=../tasks/http
 IPATH+=../../common
 IPATH+=../../../inc
 IPATH+=../../../oslib
@@ -84,19 +88,18 @@ IPATH+=../../../driverlib
 IPATH+=../../../simplelink
 IPATH+=../../../simplelink/source
 IPATH+=../../../simplelink/include
-IPATH+=../../../netapps/http/server
 IPATH+=../../../third_party/fatfs
 IPATH+=../../../third_party/FreeRTOS
 IPATH+=../../../third_party/FreeRTOS/source
 IPATH+=../../../third_party/FreeRTOS/source/portable/GCC/ARM_CM4
 IPATH+=../../../third_party/FreeRTOS/source/include
-
+IPATH+=../../${HTTP_SERVER_PATH}
 
 #
 # The default rule, which causes the driver library to be built.
 #
 all: ${OBJDIR} ${BINDIR}
-all: ${BINDIR}/annalogger.axf
+all: ${TARGET}
 
 #
 # The rule to clean out all the build products.
@@ -111,11 +114,13 @@ clean:
 #
 ${OBJDIR}:
 	@mkdir -p ${OBJDIR}
+	@mkdir -p ${OBJDIR}/${HTTP_SERVER_PATH}
 	@mkdir -p ${OBJDIR}/tasks/uart
 	@mkdir -p ${OBJDIR}/tasks/network
 	@mkdir -p ${OBJDIR}/tasks/sd
 	@mkdir -p ${OBJDIR}/tasks/sensor
 	@mkdir -p ${OBJDIR}/tasks/master
+	@mkdir -p ${OBJDIR}/tasks/http
 
 
 ${BINDIR}:
@@ -129,40 +134,53 @@ debug:
 #
 
 ifdef LAUNCHPAD
-${BINDIR}/annalogger.axf: ${OBJDIR}/launchpad.o
-${BINDIR}/annalogger.axf: ${OBJDIR}/launchpad_sensor.o
-${BINDIR}/annalogger.axf: ${OBJDIR}/bma222_sensor.o
-${BINDIR}/annalogger.axf: ${OBJDIR}/bma222drv.o
-${BINDIR}/annalogger.axf: ${OBJDIR}/tmp006drv.o
+${TARGET}: ${OBJDIR}/launchpad.o
+${TARGET}: ${OBJDIR}/launchpad_sensor.o
+${TARGET}: ${OBJDIR}/bma222_sensor.o
+${TARGET}: ${OBJDIR}/bma222drv.o
+${TARGET}: ${OBJDIR}/tmp006drv.o
 endif
 
-${BINDIR}/annalogger.axf: ${OBJDIR}/sensor.o
+${TARGET}: ${OBJDIR}/strlib.o
+${TARGET}: ${OBJDIR}/base64.o
+${TARGET}: ${OBJDIR}/HttpAuth.o
+${TARGET}: ${OBJDIR}/HttpDebug.o
+${TARGET}: ${OBJDIR}/HttpDynamic.o
+${TARGET}: ${OBJDIR}/HttpStatic.o
+${TARGET}: ${OBJDIR}/HttpString.o
+${TARGET}: ${OBJDIR}/sha1.o
+${TARGET}: ${OBJDIR}/WebSockHandler.o
+${TARGET}: ${OBJDIR}/HttpSocket.o
+${TARGET}: ${OBJDIR}/HttpCore.o
 
-${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/uart/uart_task.o
-${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/sd/sd_task.o
-${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/sd/ff.o
-${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/sd/diskio.o
+${TARGET}: ${OBJDIR}/sensor.o
 
-#${BINDIR}/annalogger.axf: ${OBJDIR}/network_if.o
-${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/network/ws_list.o
-${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/network/network.o
-${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/network/network_task.o
-${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/network/network_ap.o
-${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/network/network_ws.o
-${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/sensor/sensor_task.o
-${BINDIR}/annalogger.axf: ${OBJDIR}/tasks/master/master_task.o
+${TARGET}: ${OBJDIR}/tasks/uart/uart_task.o
+${TARGET}: ${OBJDIR}/tasks/sd/sd_task.o
+${TARGET}: ${OBJDIR}/tasks/sd/ff.o
+${TARGET}: ${OBJDIR}/tasks/sd/diskio.o
 
-${BINDIR}/annalogger.axf: ${OBJDIR}/pinmux.o
-${BINDIR}/annalogger.axf: ${OBJDIR}/i2c_if.o
-${BINDIR}/annalogger.axf: ${OBJDIR}/uart_if.o
-${BINDIR}/annalogger.axf: ${OBJDIR}/gpio_if.o
-${BINDIR}/annalogger.axf: ${OBJDIR}/main.o
+#${TARGET}: ${OBJDIR}/network_if.o
+${TARGET}: ${OBJDIR}/tasks/network/ws_list.o
+${TARGET}: ${OBJDIR}/tasks/network/network.o
+${TARGET}: ${OBJDIR}/tasks/network/network_task.o
+${TARGET}: ${OBJDIR}/tasks/network/network_ap.o
+${TARGET}: ${OBJDIR}/tasks/network/network_ws.o
+${TARGET}: ${OBJDIR}/tasks/sensor/sensor_task.o
+${TARGET}: ${OBJDIR}/tasks/master/master_task.o
+${TARGET}: ${OBJDIR}/tasks/http/http_task.o
 
-${BINDIR}/annalogger.axf: ${OBJDIR}/startup_${COMPILER}.o
-${BINDIR}/annalogger.axf: ${ROOT}/simplelink/${COMPILER}/${BINDIR}/libsimplelink.a
-${BINDIR}/annalogger.axf: ${ROOT}/driverlib/${COMPILER}/${BINDIR}/libdriver.a
-${BINDIR}/annalogger.axf: ${ROOT}/oslib/${COMPILER}/${BINDIR}/FreeRTOS.a
-#${BINDIR}/annalogger.axf: ${ROOT}/netapps/http/server/gcc/exe/libwebserver.a
+${TARGET}: ${OBJDIR}/pinmux.o
+${TARGET}: ${OBJDIR}/i2c_if.o
+${TARGET}: ${OBJDIR}/uart_if.o
+${TARGET}: ${OBJDIR}/gpio_if.o
+${TARGET}: ${OBJDIR}/main.o
+
+${TARGET}: ${OBJDIR}/startup_${COMPILER}.o
+${TARGET}: ${ROOT}/simplelink/${COMPILER}/${BINDIR}/libsimplelink.a
+${TARGET}: ${ROOT}/driverlib/${COMPILER}/${BINDIR}/libdriver.a
+${TARGET}: ${ROOT}/oslib/${COMPILER}/${BINDIR}/FreeRTOS.a
+#${TARGET}: ${ROOT}/netapps/http/server/gcc/exe/libwebserver.a
 SCATTERgcc_annalogger=annalogger.ld
 ENTRY_annalogger=ResetISR
 
