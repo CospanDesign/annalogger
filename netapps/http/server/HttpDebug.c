@@ -32,7 +32,8 @@ void HttpAssert(int condition)
 {
     if (condition)
         return;
-    Report("ASSERTION!\n\r");
+
+    Report("HttpDebug: UNRECOVERABLE ASSERTION\n\r");
 
     while (1)
     {

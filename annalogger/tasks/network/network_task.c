@@ -33,6 +33,8 @@ void network_task_entry(void *pvParameters){
 	state = RESET;
 	retval = 0;
 
+  setup_dynamic_content();
+
 	//let all other threads settle before starting network initialization
 
 	while (1){

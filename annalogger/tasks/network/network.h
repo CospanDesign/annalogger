@@ -79,4 +79,10 @@ int device_connected_ap(void);
 //Network Workstation
 long setup_wlan_ws_mode(void);
 
+//Resources
+void setup_dynamic_content(void);
+int exe_param_config(struct HttpRequest* request);
+
+
+
 #endif

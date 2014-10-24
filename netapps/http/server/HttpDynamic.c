@@ -17,6 +17,7 @@
  */
 
 #include "HttpDynamic.h"
+#include "HttpDebug.h"
 #include "HttpRequest.h"
 #include "HttpResponse.h"
 #include "HttpCore.h"
@@ -37,10 +38,12 @@ Resource g_RestContent[MAX_RESOURCE];
 
 int g_NumResource = 0;
 
-int SetResources(unsigned char method, char* pBuf, unsigned char* (*pCbRestFunc)(void *pArgs) )
+//int SetResources(unsigned char method, char* pBuf, unsigned char* (*pCbRestFunc)(void *pArgs) )
+int SetResources(unsigned char method, char* pBuf, int (*pCbRestFunc) (struct HttpRequest *request))
 {
 
 	// POST is 0 and GET is 1
+  HttpDebug("\t\tSet Resources\r\n");
 
 	if(g_NumResource <= MAX_RESOURCE)
 	{
@@ -68,21 +71,26 @@ int SetResources(unsigned char method, char* pBuf, unsigned char* (*pCbRestFunc)
  */
 int HttpDynamic_InitRequest(UINT16 uConnection, struct HttpBlob resource, UINT8 method)
 {
+  HttpDebug("\t\tInit Request: Resources\r\n");
+  HttpDebug("\t\tHttpBlob: %s\r\n", resource.pData);
 
 	/* look for known resource names according to g_RestContent*/
 	for (g_NumResource = 0; g_NumResource < MAX_RESOURCE; g_NumResource++)
 	{
+    HttpDebug("\t\t\tResource String[%d] = %s\r\n", g_NumResource, g_RestContent[g_NumResource].ResourceString);
 		if (HttpString_nextToken((char*)g_RestContent[g_NumResource].ResourceString,  strlen((const char*)g_RestContent[g_NumResource].ResourceString), resource) != NULL)
 			break;
 	}
 
 	/* Rest resource not found */
-	if (g_NumResource == MAX_RESOURCE)
+	if (g_NumResource == MAX_RESOURCE){
 		return 0;
+  }
 
 	/* Method doesn't match */
-	if(g_RestContent[g_NumResource].rest_method != method)
+	if(g_RestContent[g_NumResource].rest_method != method){
 		return 0;
+  }
 
 
 	return 1;
@@ -98,23 +106,27 @@ int HttpDynamic_InitRequest(UINT16 uConnection, struct HttpBlob resource, UINT8 
  */
 int HttpDynamic_ProcessRequest(struct HttpRequest* request)
 {
+  /*
 	struct HttpBlob contentType,nullBlob;
 	struct HttpBlob contentBody;
 	void *pArgs = NULL;
+
+  HttpDebug("\t\tProcess Request: Resources\r\n");
 
 	contentType.pData = NULL;
 	contentType.uLength = 0;
 	nullBlob = contentType;
 
-	/* 1. Call user defined API */
+  
+	// 1. Call user defined API
 	contentBody.pData = g_RestContent[g_NumResource].pCbfunc(pArgs);
 	contentBody.uLength = strlen((const char*)contentBody.pData);
 
-	/* 2. Set header for HTTP Response */
+	// 2. Set header for HTTP Response
 	if(!HttpResponse_Headers(request->uConnection, HTTP_STATUS_OK, 0, contentBody.uLength, contentType, nullBlob))
 		return 0;
 
-	/* 3. fill the content response (if exists) */
+	// 3. fill the content response (if exists)
 	if (contentBody.uLength != 0)
 	{
 		if(!HttpResponse_Content(request->uConnection, contentBody))
@@ -122,6 +134,8 @@ int HttpDynamic_ProcessRequest(struct HttpRequest* request)
 	}
 
 	return 1;
+  */
+  return g_RestContent[g_NumResource].pCbfunc(request);
 }
 
 

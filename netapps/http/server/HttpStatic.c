@@ -55,17 +55,18 @@ int HttpStatic_InitRequest(UINT16 uConnection, struct HttpBlob resource)
 	char *pcWWWFsDir = "www";
 	memset(g_cFileName,'\0',40);
 
+  //If the user specifies only the IP then return index.html
 	if(resource.uLength ==1 && *(resource.pData)=='/')
 	{
-		strcpy(g_cFileName,"www/main.html");
+		strcpy(g_cFileName,"www/index.html");
 	}
 	else
 	{	
-		strcpy(g_cFileName,pcWWWFsDir);
-		strncat(g_cFileName,(char*)resource.pData,resource.uLength);
+		strcpy(g_cFileName, pcWWWFsDir);
+		strncat(g_cFileName, (char*)resource.pData, resource.uLength);
 	}
 
-	if(sl_FsOpen((unsigned char*)g_cFileName,FS_MODE_OPEN_READ,NULL,&glFileHandle)<0)
+	if(sl_FsOpen((unsigned char*)g_cFileName, FS_MODE_OPEN_READ, NULL, &glFileHandle)<0)
 		return 0;
 	else
 	{

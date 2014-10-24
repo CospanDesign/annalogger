@@ -492,7 +492,7 @@
          <ModeEntry name="PublicWrite" checked="false"/>
          <ModeEntry name="PublicRead" checked="false"/>
       </mode>
-      <verify>false</verify>
+      <verify>true</verify>
       <Update>true</Update>
       <Erase>false</Erase>
       <Certificate></Certificate>

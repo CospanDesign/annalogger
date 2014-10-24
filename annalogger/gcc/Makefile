@@ -54,7 +54,7 @@ include ${ROOT}/tools/gcc_scripts/makedefs
 VPATH=..
 VPATH+=../../drivers
 VPATH+=../../common
-VPATH+=${ROOT}/${HTTP_SERVER_PATH}
+VPATH+=${ROOT}/projects/${HTTP_SERVER_PATH}
 
 
 #Uncomment the line below to use the launchpad platform instead of annalogger board
@@ -166,6 +166,7 @@ ${TARGET}: ${OBJDIR}/tasks/network/network.o
 ${TARGET}: ${OBJDIR}/tasks/network/network_task.o
 ${TARGET}: ${OBJDIR}/tasks/network/network_ap.o
 ${TARGET}: ${OBJDIR}/tasks/network/network_ws.o
+${TARGET}: ${OBJDIR}/tasks/network/dynamic_content.o
 ${TARGET}: ${OBJDIR}/tasks/sensor/sensor_task.o
 ${TARGET}: ${OBJDIR}/tasks/master/master_task.o
 ${TARGET}: ${OBJDIR}/tasks/http/http_task.o
