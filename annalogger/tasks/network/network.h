@@ -40,8 +40,10 @@ typedef struct _network_controller_t {
 
   unsigned char   ssid[SSID_LEN_MAX + 1];
   unsigned char   bssid[BSSID_LEN_MAX];
+  bool            requires_reset;
 
 	unsigned char  	status;
+  int             mode;
 
   bool            ipv6;
 	unsigned char  	ip[6];

@@ -52,7 +52,7 @@ include ${ROOT}/tools/gcc_scripts/makedefs
 # Where to find source files that do not live in this directory.
 #
 VPATH=..
-VPATH+=../../drivers
+VPATH+=../../driverlib
 VPATH+=../../common
 VPATH+=${ROOT}/projects/${HTTP_SERVER_PATH}
 

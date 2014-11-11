@@ -360,6 +360,7 @@ long configure_simplelink_to_default_state()
     long lMode = -1;
 
     lMode = sl_Start(0, 0, 0);
+    nc.mode = lMode;
     ASSERT_ON_ERROR(lMode);
 
     // If the device is not in station-mode, try configuring it in station-mode 
@@ -394,6 +395,7 @@ long configure_simplelink_to_default_state()
             return DEVICE_NOT_IN_STATION_MODE;
         }
     }
+    nc.mode = ROLE_STA;
     
     // Get the device's version-information
     ucConfigOpt = SL_DEVICE_GENERAL_VERSION;

@@ -77,6 +77,7 @@ long setup_wlan_ap_mode(void *params)
       
 
   }
+  nc.mode = ROLE_AP;
 
   sl_NetCfgGet(SL_MAC_ADDRESS_GET, NULL, &mac_address_len, (_u8 *)mac_address_value);
   snprintf(ssid_name, 32, "%s: %02X.%02X.%02X.%02X.%02X.%02X\0", AP_SSID_NAME,
@@ -111,6 +112,7 @@ long setup_wlan_ap_mode(void *params)
 
   if(retval != ROLE_AP){
     retval = sl_WlanSetMode(ROLE_AP);
+    nc.mode = ROLE_AP;
 
     ASSERT_ON_ERROR(retval);
     retval = sl_Stop(0xFF);
@@ -172,6 +174,7 @@ int device_connected_ap(void){
 
   // revert to STA mode
   retval = sl_WlanSetMode(ROLE_STA);
+  nc.mode = ROLE_STA;
   if(retval < 0)
   {
     ERR_PRINT(retval);

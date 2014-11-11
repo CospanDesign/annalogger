@@ -1,5 +1,6 @@
 #include "network.h"
 
+extern network_controller_t nc;
 
 long setup_wlan_ws_mode(void){
   long retval = 0;
@@ -29,5 +30,6 @@ long setup_wlan_ws_mode(void){
               10);
 
   NETWORK_PRINT("Workstation: Start Server!\r\n");
+  nc.mode = ROLE_STA;
   return retval;
 }

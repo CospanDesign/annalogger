@@ -61,7 +61,6 @@ ListDirectory(DIR *dir)
 
 }
 
-
 void sd_task_entry(void *pvParameters){ 
   FIL fp;
   FATFS fs;
@@ -109,7 +108,7 @@ void sd_task_entry(void *pvParameters){
 
         // Configure card clock
         //MAP_SDHostSetExpClk(SDHOST_BASE,
-        //                    MAP_PRCMPeripheralClockGet(PRCM_SDHOST),15000000);
+        //              MAP_PRCMPeripheralClockGet(PRCM_SDHOST),15000000);
         MAP_SDHostSetExpClk(SDHOST_BASE,
                       MAP_PRCMPeripheralClockGet(PRCM_SDHOST),1000000);
 

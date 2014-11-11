@@ -59,7 +59,7 @@ extern "C"
 //
 
 //Defaults
-#define SSID_NAME           "cc3200demo"    /* AP SSID */
+#define SSID_NAME           "Annalogger"    /* AP SSID */
 #define SECURITY_TYPE       SL_SEC_TYPE_OPEN/* Security type (OPEN or WEP or WPA*/
 #define SECURITY_KEY        ""              /* Password of the secured AP */
 #define SSID_LEN_MAX        32

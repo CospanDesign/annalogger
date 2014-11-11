@@ -28,6 +28,7 @@ void network_task_entry(void *pvParameters){
 
 	neq = nc.al_queues->network_queue;
   nc.ws_list = wsl_new("Web Socket Connections");
+  nc.requires_reset = false;
   msg.event_type = 0;
 	
 	state = RESET;

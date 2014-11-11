@@ -60,6 +60,7 @@
 #include "simplelink.h"
 #include "device.h"
 #include "gpio_if.h"
+#include "systick.h"
 
 #ifdef USE_LAUNCHPAD
 #include "launchpad.h"
@@ -96,9 +97,13 @@
 #define APP_NAME                "Annalogger"
 #define APPLICATION_VERSION     "0.0.1"
 #define OSI_STACK_SIZE          2048
+//#define SYSCLK                  80000000
+#define SYSTICK_RELOAD_VALUE    0x0000C3500
+#define SYSTICKS_PER_SECOND     1000
 
 
 extern void (* const g_pfnVectors[])(void);
+unsigned long tick_seconds = 0;
 
 al_queues_t al_queues;
 
@@ -150,6 +155,30 @@ void vApplicationStackOverflowHook(OsiTaskHandle *pxTask,
     }
 }
 #endif //USE_FREERTOS
+
+void
+SysTickHandler(void)
+{
+    static unsigned long ulTickCount = 0;
+    
+    //
+    // Increment the tick counter.
+    //
+    ulTickCount++;
+    
+    //
+    // If the number of ticks per second has occurred, then increment the
+    // seconds counter.
+    //
+    if(!(ulTickCount % SYSTICKS_PER_SECOND))
+    {
+        tick_seconds++;
+    }
+
+}
+
+
+
 OsiReturnVal_e generic_enqueue(  OsiMsgQ_t *queue,  
                                 uint8_t    event_type,
                                 int32_t    message_param,
@@ -244,6 +273,17 @@ static void BoardInit(void)
     MAP_IntEnable(FAULT_SYSTICK);
 
     PRCMCC3200MCUInit();
+
+    //
+    // SysTick Enabling
+    //
+    //SysTickIntRegister(SysTickHandler);
+    //SysTickIntEnable();
+    //SysTickPeriodSet(SYSTICK_RELOAD_VALUE);
+    //SysTickEnable();
+
+
+
 }
 
 int setup_queues(){

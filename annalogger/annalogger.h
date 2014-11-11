@@ -11,6 +11,9 @@
 
 #define AP_SSID_NAME "Annalogger"
 
+#define DOMAIN "local"
+#define DEVICENAME "Annalogger"
+
 /* Queue Information */
 #define MASTER_QUEUE_SIZE 	32
 #define SENSOR_QUEUE_SIZE 	32
