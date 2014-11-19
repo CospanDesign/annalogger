@@ -39,7 +39,7 @@ typedef struct
 	unsigned char rest_method;
 	unsigned char *ResourceString;
 	//unsigned char* (*pCbfunc)(void*);
-	int (*pCbfunc)(struct HttpRequest* request);
+	int (*pCbfunc)(struct HttpRequest* request, char * filename);
 }Resource;
 
 #define 	POST 	0
@@ -47,7 +47,7 @@ typedef struct
 
 
 //int SetResources(unsigned char method, char* pBuf, unsigned char* (*pCbRestFunc)(void *pArgs) );
-int SetResources(unsigned char method, char* pBuf, int (*pCbRestFunc)(struct HttpRequest* request) );
+int SetResources(unsigned char method, char* pBuf, int (*pCbRestFunc)(struct HttpRequest* request, char * filename) );
 
 /**
  * Initialize HttpDynamic module state for a new request, and identify the request

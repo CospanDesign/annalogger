@@ -39,7 +39,7 @@ Resource g_RestContent[MAX_RESOURCE];
 int g_NumResource = 0;
 
 //int SetResources(unsigned char method, char* pBuf, unsigned char* (*pCbRestFunc)(void *pArgs) )
-int SetResources(unsigned char method, char* pBuf, int (*pCbRestFunc) (struct HttpRequest *request))
+int SetResources(unsigned char method, char* pBuf, int (*pCbRestFunc) (struct HttpRequest *request, char * filename))
 {
 
 	// POST is 0 and GET is 1
@@ -135,7 +135,7 @@ int HttpDynamic_ProcessRequest(struct HttpRequest* request)
 
 	return 1;
   */
-  return g_RestContent[g_NumResource].pCbfunc(request);
+  return g_RestContent[g_NumResource].pCbfunc(request, g_RestContent[g_NumResource].ResourceString);
 }
 
 
